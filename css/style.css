@@ -1,0 +1,364 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000;
+  background-color: #fff;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #D40F0F;
+}
+
+.section-title::before {
+  content: attr(data-en);
+  display: block;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.news .card {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto 1fr;
+  grid-template-areas: "cYear cCat cCat  " "cImg  cTitle cTitle";
+  gap: 10px;
+}
+.news .card .card__title {
+  grid-area: cTitle;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+.news .card .card__year {
+  grid-area: cYear;
+  color: #fff;
+}
+.news .card .card__category {
+  grid-area: cCat;
+}
+.news .card .card__category span {
+  color: #fff;
+  background-color: #D40F0F;
+  padding: 3px 5px;
+  border-radius: 3px;
+}
+.news .card .card__img {
+  grid-area: cImg;
+  width: 100px;
+}
+.news .cards__item {
+  margin-top: 1rem;
+  background-color: #000;
+}
+
+/*
+.card__wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card__img img {
+  // aspect-ratio: 3 / 2;
+  object-fit: cover;
+  // width:30%;
+}
+
+.card__title {
+  // text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+  color: white;
+}
+
+.card__meta {
+  display: flex;
+  // justify-content: space-between;
+  margin-top: 15px;
+  .card__year {
+    color: white;
+  }
+  .card__category {
+    margin-left: 1rem;
+    color: white;
+    background-color: red;
+  }
+
+}
+*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  padding: 20px;
+  min-width: 300px;
+  background-color: gray;
+  border-radius: 20%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.news {
+  background-color: gray;
+}
+
+.news__inner {
+  background-color: #484343;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.news__title {
+  text-align: center;
+}
+
+.news__btn {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.colum {
+  background-color: gray;
+}
+
+.colum__inner {
+  background-color: black;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.colum__title {
+  text-align: center;
+}
+
+.colum__btn {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.ranking {
+  background-color: gray;
+}
+
+.ranking__inner {
+  background-color: black;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ranking__title {
+  text-align: center;
+}
+
+.ranking__btn {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/*========= ナビゲーションのためのCSS ===============*/
+#g-nav {
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position: fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100vh; /*ナビの高さ*/
+  background: #DBE8E7;
+  /*動き*/
+  transition: all 0.6s;
+}
+@media screen and (min-width: 768px) {
+  #g-nav {
+    display: none;
+  }
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive {
+  left: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh; /*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+
+/*リストのレイアウト設定*/
+#g-nav li {
+  list-style: none;
+  text-align: center;
+}
+
+#g-nav li a {
+  color: #343;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn {
+  position: fixed;
+  z-index: 9999; /*ボタンを最前面に*/
+  top: 10px;
+  left: 10px;
+  background-color: #FF0000;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+@media screen and (min-width: 768px) {
+  .openbtn {
+    display: none;
+  }
+}
+
+/*×に変化*/
+.openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: black;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+.header {
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.header-inner {
+  position: fixed;
+  width: 100%;
+  transition: 0.5s;
+}
+.header-inner.scrolled {
+  background-color: #DBE8E7;
+}
+.header-inner.scrolled .header-logo a {
+  color: #484343;
+}
+.header-inner.scrolled .nav-button i {
+  color: #484343;
+}
+.header-inner.scrolled .pc-nav-list a {
+  color: #484343;
+}
+
+.header-logo {
+  display: block;
+  text-align: center;
+  padding-top: 7rem;
+  background-color: black;
+}
+.header-logo .pc-nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header-logo .pc-nav {
+    display: flex;
+    justify-content: center;
+  }
+}
+.header-logo .pc-nav .pc-nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.header-logo .pc-nav .pc-nav-list a {
+  margin-right: 2rem;
+  color: #484343;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+@media screen and (min-width: 550px) {
+  .header-logo .pc-nav .pc-nav-list a {
+    font-size: 18px;
+  }
+}
+
+/* 文字コードの指定 */
+
+/*# sourceMappingURL=style.css.map */

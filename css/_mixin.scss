@@ -1,0 +1,22 @@
+$tablet: 550px;
+$pc: 768px;
+$sp: 549px;
+
+
+@mixin sp {
+  @media screen and (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: ($tablet)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: ($pc)) {
+    @content;
+  }
+}
