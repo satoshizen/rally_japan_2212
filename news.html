@@ -3,17 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>トップページ</title>
+        <title>NEWS</title>
         <meta name="description" content="ページの説明が入ります">
 
         <!-- CSS -->
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-        <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-
 
         <link rel="stylesheet" href="./css/style.css">
         
@@ -44,22 +39,20 @@
                       </ul>
                   </div>
               </nav>
-              <section class="header-logo">
-                <a href="index.html">
-                  <img class="logo image" src="./img/rally_logo_01.png" alt="Rally Japan">
-                </a>
-              </section>
-              <nav class="pc-nav">
+              <!-- <nav class="pc-nav">
                   <ul class="pc-nav-list">
                       <li><a href="index.html">HOME</a></li>  
                       <li><a href="news.html">NEWS</a></li>  
                       <li><a href="column.html">COLUMN</a></li>  
                       <li><a href="movie.html">MOVIE</a></li>
-                      <li><a href="privacy.html">PRIVACY-POLICY</a></li>
+                      <li><a href="privacy.html">PRIVACY POLICY</a></li>
                       <li><a href="company.html">COMPANY</a></li>
                       <li><a href="contact.html">CONTACT</a></li>
                   </ul>
-              </nav>                   
+              </nav>                    -->
+              <section class="header-logo">
+                  <a href="index.html" class=""><img class="logo image" src="./img/rally_logo_01.png" alt="Rally Japan"></a>
+              </section>
           </div>
         </header>
         <!-- メイン -->
@@ -68,22 +61,88 @@
           <section class="news">
             <!-- インナー -->
             <div class="news__inner">
-              <!-- カルーセル -->
-              <div class="carousel">
-                <div><img src="./img/WRC_1.jpg" alt=""></div>
-                <div><img src="./img/WRC_2.jpg" alt=""></div>
-                <div><img src="./img/WRC_3.jpg" alt=""></div>
-              </div>
-
-              <!-- タイトル -->
+            <!-- タイトル -->
               <h2 class="news__title section-title" data-en="news">
                 最新ニュース
               </h2>
-
+              <div class="news__tag">
+                <div class="tag_title">
+                  <p>news_tag</p>
+                </div>
+                <div class="tag_title">
+                  <p>news_tag</p>
+                </div>
+                <div class="tag_title">
+                  <p>news_tag</p>
+                </div>
+                <div class="tag_title">
+                  <p>news_tag</p>
+                </div>                
+                <div class="tag_title">
+                  <p>news_tag</p>
+                </div>
+                <div class="tag_title">
+                  <p>news_tag</p>
+                </div>
+              </div>
               <!-- カード群 -->
               <div class="news__cards cards">
  
                 <!-- カード -->
+                <a href="news_indiv.html">
+                  <div class="cards__item card">
+                    <h3 class="card__title">
+                      タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
+                    </h3>
+                    <span class="card__year">2022/12/12</span>
+                    <div class="card__category">
+                      <span>カテゴリー1</span>
+                    </div>
+                    <div class="card__img">
+                      <img src="./img/WRC_2022_TOP.jpg" alt="">
+                    </div>
+                  </div>
+                </a>
+                <!-- カード -->
+                <div class="cards__item card">
+                  <h3 class="card__title">
+                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
+                  </h3>
+                  <span class="card__year">2022/12/12</span>
+                  <div class="card__category">
+                    <span>カテゴリー1</span>
+                  </div>
+                  <div class="card__img">
+                    <img src="./img/WRC_2022_TOP.jpg" alt="">
+                  </div>
+                </div>
+                <!-- カード -->
+                <div class="cards__item card">
+                  <h3 class="card__title">
+                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
+                  </h3>
+                  <span class="card__year">2022/12/12</span>
+                  <div class="card__category">
+                    <span>カテゴリー1</span>
+                  </div>
+                  <div class="card__img">
+                    <img src="./img/WRC_2022_TOP.jpg" alt="">
+                  </div>
+                </div>
+                <!-- カード -->
+                <div class="cards__item card">
+                  <h3 class="card__title">
+                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
+                  </h3>
+                  <span class="card__year">2022/12/12</span>
+                  <div class="card__category">
+                    <span>カテゴリー1</span>
+                  </div>
+                  <div class="card__img">
+                    <img src="./img/WRC_2022_TOP.jpg" alt="">
+                  </div>
+                </div>
+                <!-- カード -->
                 <div class="cards__item card">
                   <h3 class="card__title">
                     タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
@@ -163,6 +222,7 @@
                 </div>
 
               </div>
+              
               <!-- ボタンの囲い -->
               <div class="news__btn">
                 <!-- ボタン -->
@@ -171,207 +231,7 @@
             </div>
           </section>
 
-          <!-- COLUMNセクション -->
-          <section class="column">
-            <!-- インナー -->
-            <div class="column__inner">
-            <!-- タイトル -->
-            <h2 class="column__title section-title" data-en="column">
-              最新コラム
-            </h2>
 
-              <!-- カード群 -->
-              <div class="column__cards cards">
-                <!-- カード -->
-                <div class="cards__item card">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-              </div>
-              <!-- ボタンの囲い -->
-              <div class="column__btn">
-                <!-- ボタン -->
-                <a href="" class="btn">もっと見る</a>
-              </div>
-            </div>
-          </section>
-
-          <!-- ACCESS RANKINGセクション -->
-          <section class="ranking">
-            <!-- インナー -->
-            <div class="ranking__inner">
-            <!-- タイトル -->
-              <h2 class="ranking__title section-title" data-en="access ranking">
-                アクセスランキング
-              </h2>
-              <!-- カード群 -->
-              <div class="ranking__cards cards">
-                <!-- カード -->
-                <div class="cards__item card--1">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <div class="card__num"><span>1</span></div>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card--2">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <div class="card__num"><span>2</span></div>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card--3">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <div class="card__num"><span>3</span></div>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card--4">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <div class="card__num"><span>4</span></div>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card--5">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <div class="card__num"><span>5</span></div>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-                <!-- カード -->
-                <div class="cards__item card--6">
-                  <h3 class="card__title">
-                    タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。タイトルがはいります。
-                  </h3>
-                  <div class="card__num"><span>6</span></div>
-                  <span class="card__year">2022/12/12</span>
-                  <div class="card__category">
-                    <span>カテゴリー1</span>
-                  </div>
-                  <div class="card__img">
-                    <img src="./img/WRC_2022_TOP.jpg" alt="">
-                  </div>
-                </div>
-
-              </div>
-              <!-- ボタンの囲い -->
-              <div class="column__btn">
-                <!-- ボタン -->
-                <a href="" class="btn">もっと見る</a>
-              </div>
-            </div>
-          </section>
 
         </main>
 
@@ -401,15 +261,9 @@
 
         <!-- JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-        <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-        <script src="/js/carousel.js"></script>
-        
         <!--自作のJS-->
         <script src="js/g-nav.js"></script>
-        
-        <!-- <script src="./js/header.js"></script> -->
-        
+
+        <script src="./js/header.js"></script>
     </body>
 </html>

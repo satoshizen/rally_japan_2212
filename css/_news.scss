@@ -1,0 +1,66 @@
+@use "variable" as v;
+@use "mixin" as m;
+
+.news__tag {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 400px;
+  margin: 3rem auto;
+
+  .tag_title{
+    text-align: center;
+    width: 40%;
+    p {
+      padding: 1px;
+      margin: 4px;
+      background-color: v.$red1;
+      border-radius: 1rem;
+    }
+  }
+}
+
+.news_indiv {
+  .card {
+    // display: grid;
+    // grid-template-rows: auto auto;
+    // grid-template-columns: auto auto 1fr;
+    // grid-template-areas: 
+    //   "cYear cCat cCat  "
+    //   "cImg  cTitle cTitle";
+    // gap: 10px;
+    
+    .card__title {
+      grid-area: cTitle;
+      color: v.$white;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.2;
+      font-size: 1.2rem;
+    }
+
+    .card__year {
+      grid-area: cYear;
+      color: v.$white;
+    }
+
+    .card__category {
+      grid-area: cCat;
+      span {
+        color: v.$white;
+        background-color: v.$red2;
+        padding: 3px 5px;
+        border-radius: 3px;
+      }
+    }
+    // .card__img {
+    //   grid-area: cImg;
+    //   // width: 100px;
+    // }
+  }
+  .cards__item {
+    margin-top: 2rem;
+    background-color: v.$black;
+
+  }
+ }

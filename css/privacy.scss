@@ -1,0 +1,13 @@
+@use "variable" as v;
+@use "mixin" as m;
+.privacy__inner{
+  
+  .privacy__title{
+    text-align: center;
+  }
+  
+  .text {
+    color: v.$white;
+    margin: 0 1rem;
+  }
+}
