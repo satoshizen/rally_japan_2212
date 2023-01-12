@@ -20,3 +20,9 @@ $sp: 549px;
     @content;
   }
 }
+
+@mixin other {
+  @media screen and (min-width: ($tablet)) and (max-width: ($pc - 1px)){
+    @content;
+  }
+}

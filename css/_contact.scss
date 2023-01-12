@@ -1,0 +1,88 @@
+@use "variable" as v;
+@use "mixin" as m;
+
+.contact-container {
+  @include m.pc {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+
+  }
+  input, select, textarea {
+    background-color: v.$green04;
+  }
+ }
+
+ .inner-container{
+    margin: 0 2rem;
+ }
+ 
+div {
+  .hissu {
+    color : v.$red1;
+    font-size: 1rem;
+    vertical-align: top;
+  
+ }
+//  .wpcf7-form-control-wrap {
+//     position:static;
+//     font-size: 1.6rem;
+// }
+  &.company {
+    input {
+      width: 15rem;
+    }
+  }
+  
+  &.name {
+    input {
+      width: 10rem;
+    }
+  }
+  
+  &.male {
+    input {
+      width: 20rem;
+    }
+  }
+  
+  &.prefer {
+    select {
+      width: 10rem;
+    }
+  }
+  
+  &.city {
+    input {
+      width: 20rem;
+    }
+  }
+  
+  &.tel-no {
+    input {
+      width: 15rem;
+    }
+  }
+  
+  &.send-btn {
+    input {
+    width: 8rem;
+    height: 4rem;
+  }
+  }
+}
+
+input, textarea, select {
+  padding: 1rem;
+  border:solid 1px v.$green02;
+  border-radius: 2px;
+  box-sizing: border-box;
+  @include m.sp {
+    width: 100%;
+  }
+
+  &:focus {
+    outline: 1px v.$green03 solid;
+  }
+}
+

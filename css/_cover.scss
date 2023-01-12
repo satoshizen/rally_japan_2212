@@ -1,0 +1,23 @@
+@use "variable" as v;
+@use "mixin" as m;
+
+.cover {
+img {
+  margin:1rem 0;
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+  width: 100%; 
+  aspect-ratio: auto;
+  // height:30rem;
+  object-fit: cover;
+  // @include m.tablet {
+  //   height: 40rem;
+  // }
+  // @include m.pc {
+  //   height: 60rem;
+  // }
+
+}
+}
+

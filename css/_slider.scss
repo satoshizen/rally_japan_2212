@@ -1,0 +1,18 @@
+@use "variable" as v;
+@use "mixin" as m;
+
+slick-prev:before,
+.slick-next:before {
+  color: #000 !important;
+}
+
+.slider img,
+.slider-nav img {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 100px;
+  color: #666;
+  margin: 10px;
+  text-align: center;
+  background-color: #e0e0e0;
+}

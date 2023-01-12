@@ -1,0 +1,35 @@
+@use "variable" as v;
+@use "mixin" as m;
+
+.company__inner{
+  
+  .company__title{
+    text-align: center;
+  }
+}
+
+.kaisha {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.kaisha th,
+.kaisha td {
+  color: v.$white;
+  margin: 0 1rem;
+  border: 1px solid #ccc;
+  padding: 20px;
+  }
+  
+  .kaisha th {
+  font-weight: bold;
+  // background-color: #dedede; 
+  }
+  
+  @media screen and (max-width: 767px) {
+  .kaisha,
+  .kaisha tr,
+  .kaisha td,
+  .kaisha th {display:block;}
+  .kaisha th {width:auto;}
+  }
