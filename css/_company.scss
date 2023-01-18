@@ -2,6 +2,7 @@
 @use "mixin" as m;
 
 .company__inner{
+  margin-top: 8rem;
   
   .company__title{
     text-align: center;
@@ -19,10 +20,24 @@
   margin: 0 1rem;
   border: 1px solid #ccc;
   padding: 20px;
+  text-align: start;
+    ul {
+      padding: 0;
+      li {
+      list-style: none;
+      text-align: start;
+      }
+    }
+ }
+  @include m.tablet {
+    .kaisha td {
+    text-align: start;
+  }
   }
   
   .kaisha th {
   font-weight: bold;
+  width: 10rem;
   // background-color: #dedede; 
   }
   

@@ -5,4 +5,10 @@
   color: #fff;
   margin: 0 1rem;
 }
+@media screen and (min-width: 768px) {
+  .privacy__inner {
+    margin-top: 8rem;
+  }
+}
+
 /*# sourceMappingURL=privacy.css.map */

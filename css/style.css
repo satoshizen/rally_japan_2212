@@ -23,6 +23,11 @@ img {
   vertical-align: bottom;
 }
 
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 550px) {
   .wrapper {
     margin-top: 6rem;
@@ -32,13 +37,15 @@ img {
   .container {
     display: flex;
     flex-direction: row-reverse;
+    margin-top: 6rem;
   }
   .main-container {
-    width: 65%;
+    width: 70%;
     margin-top: 2rem;
     margin-left: 1rem;
   }
   .sub-container {
+    width: 30%;
     margin-top: 2rem;
   }
 }
@@ -47,7 +54,6 @@ img {
   font-weight: bold;
   color: #fff;
   background-color: #D40F0F;
-  margin: 0;
   padding: 1rem 0;
 }
 
@@ -83,11 +89,14 @@ img {
   color: #fff;
   margin: 0;
   line-height: 1.2;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  padding: 0.5rem;
 }
 .news .card .card__year {
   grid-area: cYear;
   color: #fff;
+  font-size: 1.2rem;
+  margin: 4px;
 }
 .news .card .card__category {
   grid-area: cCat;
@@ -97,6 +106,7 @@ img {
   background-color: #D40F0F;
   padding: 3px 5px;
   border-radius: 3px;
+  font-size: 1.2rem;
 }
 .news .card .card__img {
   grid-area: cImg;
@@ -108,15 +118,32 @@ img {
   }
 }
 
-.cards__item {
+.news__cards .cards__item {
   margin-top: 2rem;
   background-color: #000;
+}
+@media screen and (min-width: 550px) {
+  .news__cards .cards__item {
+    width: 45%;
+  }
+}
+
+.cards__item:first-child {
+  margin-top: 0;
+}
+@media screen and (min-width: 550px) {
+  .cards__item:first-child {
+    margin-top: 2rem;
+  }
 }
 
 .news__inner {
   background-color: #484343;
   max-width: 1000px;
   margin: 0 auto;
+}
+.news__inner ul {
+  padding: 1rem;
 }
 
 .news__title {
@@ -129,6 +156,8 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    max-width: 650px;
+    margin: 0 auto;
   }
 }
 .news__btn {
@@ -148,7 +177,6 @@ img {
     grid-template-rows: auto auto;
     grid-template-columns: auto 1fr;
     grid-template-areas: "cImg   cImg " "cYear  cCat  " "cTitle cTitle";
-    place-items: center;
   }
 }
 .column .card .card__title {
@@ -156,11 +184,14 @@ img {
   color: #fff;
   margin: 0;
   line-height: 1.2;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  padding: 0.5rem;
 }
 .column .card .card__year {
   grid-area: cYear;
   color: #fff;
+  font-size: 1.2rem;
+  margin: 4px;
 }
 .column .card .card__category {
   grid-area: cCat;
@@ -170,6 +201,7 @@ img {
   background-color: #D40F0F;
   padding: 3px 5px;
   border-radius: 3px;
+  font-size: 1.2rem;
 }
 .column .card .card__img {
   grid-area: cImg;
@@ -180,9 +212,14 @@ img {
     width: 100%;
   }
 }
-.column .cards__item {
-  margin-top: 1rem;
+.column .column__cards .cards__item {
+  margin-top: 2rem;
   background-color: #000;
+}
+@media screen and (min-width: 550px) {
+  .column .column__cards .cards__item {
+    width: 45%;
+  }
 }
 .column .column__inner {
   background-color: #484343;
@@ -223,6 +260,11 @@ img {
     grid-template-areas: "cImg cImg cImg" "cNum cYear cCat" "cTitle cTitle cTitle";
   }
 }
+@media screen and (min-width: 550px) {
+  .ranking .cards__item .cards__item {
+    padding-bottom: 2rem;
+  }
+}
 .ranking .cards__item .card__num {
   grid-area: cNum;
 }
@@ -230,17 +272,20 @@ img {
   color: #fff;
   background-color: #D40F0F;
   padding: 3px 8px;
+  font-size: 1.2rem;
 }
 .ranking .cards__item .card__title {
   grid-area: cTitle;
   color: #fff;
   margin: 0;
   line-height: 1.2;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .ranking .cards__item .card__year {
   grid-area: cYear;
   color: #fff;
+  font-size: 1.2rem;
+  margin: 4px;
 }
 .ranking .cards__item .card__category {
   grid-area: cCat;
@@ -250,6 +295,7 @@ img {
   background-color: #D40F0F;
   padding: 3px 5px;
   border-radius: 3px;
+  font-size: 1.2rem;
 }
 .ranking .cards__item .card__img {
   grid-area: cImg;
@@ -587,19 +633,20 @@ small {
 }
 
 .news__tag {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 400px;
   margin: 3rem auto;
 }
+@media screen and (min-width: 550px) {
+  .news__tag {
+    max-width: 650px;
+    margin: 3rem auto;
+  }
+}
 .news__tag .tag_title {
+  display: inline-block;
   text-align: center;
-  width: 40%;
 }
 .news__tag .tag_title p {
-  padding: 1px;
-  margin: 4px;
+  padding: 0 8px;
   background-color: #FF0000;
   border-radius: 1rem;
 }
@@ -615,6 +662,7 @@ small {
 .news_indiv .card .card__year {
   grid-area: cYear;
   color: #fff;
+  font-size: 1rem;
 }
 .news_indiv .card .card__category {
   grid-area: cCat;
@@ -624,6 +672,12 @@ small {
   background-color: #D40F0F;
   padding: 3px 5px;
   border-radius: 3px;
+  font-size: 1rem;
+}
+.news_indiv .card p {
+  color: #fff;
+  padding: 2rem;
+  font-size: 1.2rem;
 }
 .news_indiv .cards__item {
   margin-top: 2rem;
@@ -636,6 +690,11 @@ small {
 .privacy__inner .text {
   color: #fff;
   margin: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .privacy__inner {
+    margin-top: 8rem;
+  }
 }
 
 slick-prev:before,
@@ -654,6 +713,9 @@ slick-prev:before,
   background-color: #e0e0e0;
 }
 
+.company__inner {
+  margin-top: 8rem;
+}
 .company__inner .company__title {
   text-align: center;
 }
@@ -669,10 +731,26 @@ slick-prev:before,
   margin: 0 1rem;
   border: 1px solid #ccc;
   padding: 20px;
+  text-align: start;
+}
+.kaisha th ul,
+.kaisha td ul {
+  padding: 0;
+}
+.kaisha th ul li,
+.kaisha td ul li {
+  list-style: none;
+  text-align: start;
 }
 
+@media screen and (min-width: 550px) {
+  .kaisha td {
+    text-align: start;
+  }
+}
 .kaisha th {
   font-weight: bold;
+  width: 10rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -686,11 +764,18 @@ slick-prev:before,
     width: auto;
   }
 }
+.contact__inner {
+  margin-top: 8rem;
+}
+
+.contact__title {
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   .contact-container {
     width: 100%;
     max-width: 960px;
-    margin: 0 auto;
   }
 }
 .contact-container input, .contact-container select, .contact-container textarea {
@@ -742,6 +827,86 @@ input, textarea, select {
 }
 input:focus, textarea:focus, select:focus {
   outline: 1px #02735E solid;
+}
+
+.arrivals .cards__item {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  margin-top: 1rem;
+  background-color: #000;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "cNum cYear cCat cCat  " "cImg cImg  cTitle cTitle";
+}
+@media screen and (min-width: 550px) and (max-width: 767px) {
+  .arrivals .cards__item {
+    margin-top: 0;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-areas: "cImg cImg cImg" "cNum cYear cCat" "cTitle cTitle cTitle";
+  }
+}
+@media screen and (min-width: 550px) {
+  .arrivals .cards__item .cards__item {
+    padding-bottom: 2rem;
+  }
+}
+.arrivals .cards__item .card__num {
+  grid-area: cNum;
+}
+.arrivals .cards__item .card__num span {
+  color: #fff;
+  background-color: #D40F0F;
+  padding: 3px 8px;
+  font-size: 1.2rem;
+}
+.arrivals .cards__item .card__title {
+  grid-area: cTitle;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1.4rem;
+}
+.arrivals .cards__item .card__year {
+  grid-area: cYear;
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 4px;
+}
+.arrivals .cards__item .card__category {
+  grid-area: cCat;
+}
+.arrivals .cards__item .card__category span {
+  color: #fff;
+  background-color: #D40F0F;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+}
+.arrivals .cards__item .card__img {
+  grid-area: cImg;
+  width: 100px;
+}
+@media screen and (min-width: 550px) {
+  .arrivals .cards__item .card__img {
+    width: 100%;
+  }
+}
+
+.arrivals__inner {
+  background-color: #484343;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.arrivals__title {
+  text-align: center;
+}
+
+.ranking__btn {
+  padding: 2rem;
+  text-align: center;
 }
 
 /* 文字コードの指定 */

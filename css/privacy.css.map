@@ -1,1 +1,1 @@
-{"version":3,"sources":["privacy.scss","privacy.css","_variable.scss"],"names":[],"mappings":"AAKE;EACE,kBAAA;ACJJ;ADOE;EACE,WETI;EFUJ,cAAA;ACLJ","file":"privacy.css"}
+{"version":3,"sourceRoot":"","sources":["privacy.scss","_variable.scss","_mixin.scss"],"names":[],"mappings":"AAKE;EACE;;AAGF;EACE,OCTI;EDUJ;;AEOF;EFfF;IAYI","file":"privacy.css"}

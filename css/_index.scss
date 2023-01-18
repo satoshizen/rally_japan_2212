@@ -1,6 +1,11 @@
 @use "variable" as v;
 @use "mixin" as m;
 
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 @include m.tablet{
   .wrapper {
     margin-top: 6rem;
@@ -10,15 +15,17 @@
   .container {
     display: flex;
     flex-direction: row-reverse;
+    margin-top: 6rem;
   }
   
   .main-container {
-    width: 65%;
+    width: 70%;
     margin-top: 2rem;
     margin-left: 1rem;
   }
   
   .sub-container {
+    width: 30%;
     margin-top: 2rem;
     }
   
@@ -29,7 +36,7 @@
   font-weight: bold;
   color: v.$white;
   background-color: v.$red2;
-  margin: 0;
+  // margin: 0;
   padding: 1rem 0;
   
 }
@@ -65,21 +72,22 @@
       "cImg   cImg "
       "cYear  cCat  "
       "cTitle cTitle";
-      // place-items: center;
       }
-
     
     .card__title {
       grid-area: cTitle;
       color: v.$white;
       margin: 0;
       line-height: 1.2;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      padding: .5rem;
     }
 
     .card__year {
       grid-area: cYear;
       color: v.$white;
+      font-size: 1.2rem;
+      margin: 4px;
     }
 
     .card__category {
@@ -89,6 +97,7 @@
         background-color: v.$red2;
         padding: 3px 5px;
         border-radius: 3px;
+        font-size: 1.2rem;
       }
     }
 
@@ -101,21 +110,30 @@
     }
   }
 }
-  
-  .cards__item {
-    margin-top: 2rem;
-    background-color: v.$black;
-    // padding: 4px;
-    // @include m.tablet {
-    //   width: 42%;
-    //   // margin-left: 2rem;
-    // }
+  .news__cards {
+    .cards__item {
+      margin-top: 2rem;
+      background-color: v.$black;
+      @include m.tablet {
+        width: 45%;
+      }
+    }
   }
+  .cards__item:first-child {
+    margin-top: 0;
+    @include m.tablet {
+      margin-top: 2rem;
+    }
+  }
+
 
 .news__inner {
   background-color: v.$dark-gray;
   max-width: 1000px;
   margin: 0 auto;
+  ul { 
+    padding: 1rem;
+  }
 }
 .news__title {
   text-align: center;
@@ -126,7 +144,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    // width: 80%;
+    max-width: 650px;
+    margin: 0 auto;
   }
 }
 
@@ -134,8 +153,6 @@
   text-align: center;
   padding: 2rem;
 }
-
-
 
 .column {
   .card {
@@ -153,7 +170,7 @@
         "cImg   cImg "
         "cYear  cCat  "
         "cTitle cTitle";
-        place-items: center;
+        // place-items: center;
         }
   
     
@@ -162,12 +179,15 @@
       color: v.$white;
       margin: 0;
       line-height: 1.2;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      padding: .5rem;
     }
 
     .card__year {
       grid-area: cYear;
       color: v.$white;
+      font-size: 1.2rem;
+      margin: 4px;
     }
 
     .card__category {
@@ -177,6 +197,7 @@
         background-color: v.$red2;
         padding: 3px 5px;
         border-radius: 3px;
+        font-size: 1.2rem;
       }
     }
 
@@ -186,16 +207,17 @@
       @include m.tablet {
         width: 100%;
       }
-
     }
   }
-
-  .cards__item {
-    margin-top: 1rem;
-    background-color: v.$black;
-    // padding: 4px;
+  .column__cards {
+    .cards__item {
+      margin-top: 2rem;
+      background-color: v.$black;
+      @include m.tablet {
+        width: 45%;
+      }
+    }
   }
-
 
   .column__inner {
     background-color: v.$dark-gray;
@@ -213,13 +235,11 @@
       gap: 2rem;
     }
   }
-
   .column__btn {
     padding: 2rem;
     text-align: center;
   }
 }
-
 
 .ranking {
   .cards__item {
@@ -242,14 +262,11 @@
       "cNum cYear cCat"
       "cTitle cTitle cTitle";
     }
-    // @include m.pc {
-    //   grid-template-rows: auto auto auto;
-    //   grid-template-columns: auto 1fr;
-    //   grid-template-areas: 
-    //     "cNum cYear cCat cCat  "
-    //     "cImg cImg  cTitle cTitle";
-  
-    // }
+    @include m.tablet {
+      .cards__item { 
+        padding-bottom: 2rem;
+      }
+    }
 
     .card__num {
       grid-area: cNum;
@@ -257,6 +274,7 @@
         color: v.$white;
         background-color: v.$red2;
         padding: 3px 8px;
+        font-size: 1.2rem;
       }
     }
     .card__title {
@@ -264,12 +282,14 @@
       color: v.$white;
       margin: 0;
       line-height: 1.2;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
 
     .card__year {
       grid-area: cYear;
       color: v.$white;
+      font-size: 1.2rem;
+      margin: 4px;
     }
 
     .card__category {
@@ -279,6 +299,8 @@
         background-color: v.$red2;
         padding: 3px 5px;
         border-radius: 3px;
+        font-size: 1.2rem;
+
       }
     }
 
@@ -350,8 +372,8 @@
 }
   
   .btn {
-    text-decoration: none;
-    color: v.$white;
+  text-decoration: none;
+  color: v.$white;
     padding: 10px 20px;
     min-width: 300px;
     background-color: v.$black;
