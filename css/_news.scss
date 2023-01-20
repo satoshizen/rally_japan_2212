@@ -1,12 +1,10 @@
 @use "variable" as v;
 @use "mixin" as m;
 
+.container {
+  margin-top: 5rem;
+}
 
-// .news{
-//   .sub-container{
-
-//   }
-// }
 .news__tag {
   // display: flex;
   // flex-wrap: wrap;
@@ -33,7 +31,6 @@
 
 .news_indiv {
   .card {
-    
     .card__title {
       grid-area: cTitle;
       color: v.$white;

@@ -15,7 +15,7 @@ main {
   .container {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 6rem;
+    // margin-top: 6rem;
   }
   
   .main-container {
@@ -111,6 +111,10 @@ main {
   }
 }
   .news__cards {
+    a{
+      margin-bottom: 2rem;
+    }
+  
     .cards__item {
       margin-top: 2rem;
       background-color: v.$black;
@@ -144,8 +148,8 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    max-width: 650px;
     margin: 0 auto;
+    
   }
 }
 
@@ -172,8 +176,6 @@ main {
         "cTitle cTitle";
         // place-items: center;
         }
-  
-    
     .card__title {
       grid-area: cTitle;
       color: v.$white;

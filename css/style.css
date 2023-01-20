@@ -37,7 +37,6 @@ main {
   .container {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 6rem;
   }
   .main-container {
     width: 70%;
@@ -118,6 +117,9 @@ main {
   }
 }
 
+.news__cards a {
+  margin-bottom: 2rem;
+}
 .news__cards .cards__item {
   margin-top: 2rem;
   background-color: #000;
@@ -156,7 +158,6 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    max-width: 650px;
     margin: 0 auto;
   }
 }
@@ -632,6 +633,10 @@ small {
   text-align: center;
 }
 
+.container {
+  margin-top: 5rem;
+}
+
 .news__tag {
   margin: 3rem auto;
 }
@@ -691,11 +696,6 @@ small {
   color: #fff;
   margin: 0 1rem;
 }
-@media screen and (min-width: 768px) {
-  .privacy__inner {
-    margin-top: 8rem;
-  }
-}
 
 slick-prev:before,
 .slick-next:before {
@@ -713,9 +713,6 @@ slick-prev:before,
   background-color: #e0e0e0;
 }
 
-.company__inner {
-  margin-top: 8rem;
-}
 .company__inner .company__title {
   text-align: center;
 }
@@ -764,10 +761,6 @@ slick-prev:before,
     width: auto;
   }
 }
-.contact__inner {
-  margin-top: 8rem;
-}
-
 .contact__title {
   text-align: center;
 }
@@ -904,8 +897,12 @@ input:focus, textarea:focus, select:focus {
   text-align: center;
 }
 
-.ranking__btn {
+.arrivals__btn {
   padding: 2rem;
+  text-align: center;
+}
+
+.column_indiv .column__title {
   text-align: center;
 }
 
