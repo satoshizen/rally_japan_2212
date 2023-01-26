@@ -13,20 +13,21 @@
     grid-template-areas: 
       "cNum cYear cCat cCat  "
       "cImg cImg  cTitle cTitle";
+
     @include m.other {
       margin-top: 0;
       grid-template-rows: auto auto 1fr;
       grid-template-columns: 1fr 1fr auto;
       grid-template-areas:
-      "cImg cImg cImg"
-      "cNum cYear cCat"
+      "cImg   cImg   cImg"
+      "cNum   cYear  cCat "
       "cTitle cTitle cTitle";
     }
-    @include m.tablet {
-      .cards__item { 
-        padding-bottom: 2rem;
-      }
-    }
+    // @include m.tablet {
+    //   .cards__item { 
+    //     padding-bottom: 2rem;
+    //   }
+    // }
 
     .card__num {
       grid-area: cNum;
@@ -78,6 +79,20 @@
   background-color: v.$dark-gray;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.arrivals__cards {
+  @include m.other {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    .cards__item {
+      width: 45%;
+    }
+  }
+
 }
 .arrivals__title {
   text-align: center;

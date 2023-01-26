@@ -156,7 +156,17 @@ main {
 .news__btn {
   text-align: center;
   padding: 2rem;
+.btn {
+  text-decoration: none;
+  color: v.$white;
+    padding: 10px 20px;
+    min-width: 300px;
+    background-color: v.$black;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
 }
+
 
 .column {
   .card {
@@ -240,161 +250,146 @@ main {
   .column__btn {
     padding: 2rem;
     text-align: center;
-  }
-}
-
-.ranking {
-  .cards__item {
-    display: grid;
-    gap: 10px;
-    margin: 0;
-    margin-top: 1rem;
-    background-color: v.$black;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto 1fr;
-    grid-template-areas: 
-      "cNum cYear cCat cCat  "
-      "cImg cImg  cTitle cTitle";
-    @include m.other {
-      margin-top: 0;
-      grid-template-rows: auto auto 1fr;
-      grid-template-columns: 1fr 1fr auto;
-      grid-template-areas:
-      "cImg cImg cImg"
-      "cNum cYear cCat"
-      "cTitle cTitle cTitle";
-    }
-    @include m.tablet {
-      .cards__item { 
-        padding-bottom: 2rem;
-      }
-    }
-
-    .card__num {
-      grid-area: cNum;
-      span {
-        color: v.$white;
-        background-color: v.$red2;
-        padding: 3px 8px;
-        font-size: 1.2rem;
-      }
-    }
-    .card__title {
-      grid-area: cTitle;
-      color: v.$white;
-      margin: 0;
-      line-height: 1.2;
-      font-size: 1.4rem;
-    }
-
-    .card__year {
-      grid-area: cYear;
-      color: v.$white;
-      font-size: 1.2rem;
-      margin: 4px;
-    }
-
-    .card__category {
-      grid-area: cCat;
-      span {
-        color: v.$white;
-        background-color: v.$red2;
-        padding: 3px 5px;
-        border-radius: 3px;
-        font-size: 1.2rem;
-
-      }
-    }
-
-    .card__img {
-      grid-area: cImg;
-      width: 100px;
-      @include m.tablet {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.ranking__inner {
-  background-color: v.$dark-gray;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.ranking__title {
-  text-align: center;
-}
-
-@include m.other {
-  .ranking {
-    .cards {
-      display: grid;
-      gap: 10px;
-      grid-template-rows: auto auto auto ;
-      grid-template-columns: auto auto auto auto auto auto;
-      grid-template-areas:
-      "cCard1 cCard1 cCard1 cCard1 cCard1 cCard1 "
-      "cCard2 cCard2 cCard2 cCard3 cCard3 cCard3"
-      "cCard4 cCard4 cCard5 cCard5 cCard6 cCard6 ";
-      place-items: center;
-
-    }
-
-    .card--1 {
-      grid-area:cCard1;
-      // width: 100%;
-      // max-width: 270px;
-    }
-    .card--2 {
-      grid-area:cCard2;
-      // width: 90%;
-    }
-    .card--3 {
-      grid-area:cCard3;
-      // width: 90%;
-    }
-    .card--4 {
-      grid-area:cCard4;
-      // width: 90%;
-    }
-    .card--5 {
-      grid-area:cCard5;
-      // width: 90%;
-    }
-    .card--6 {
-      grid-area:cCard6;
-      // width: 90%;
-    }
-  }
-}
-
-.ranking__btn {
-  padding: 2rem;  
-  text-align: center;
-}
-  
   .btn {
-  text-decoration: none;
-  color: v.$white;
-    padding: 10px 20px;
-    min-width: 300px;
-    background-color: v.$black;
-    border-radius: 20px;
-    text-transform: uppercase;
+    text-decoration: none;
+    color: v.$white;
+      padding: 10px 20px;
+      min-width: 300px;
+      background-color: v.$black;
+      border-radius: 20px;
+      text-transform: uppercase;
+    }
   }
+}
+
+// .ranking {
+//   .cards__item {
+//     display: grid;
+//     gap: 10px;
+//     margin: 0;
+//     margin-top: 1rem;
+//     background-color: v.$black;
+//     grid-template-rows: auto auto auto;
+//     grid-template-columns: auto 1fr;
+//     grid-template-areas: 
+//       "cNum cYear cCat cCat  "
+//       "cImg cImg  cTitle cTitle";
+//     @include m.other {
+//       margin-top: 0;
+//       grid-template-rows: auto auto 1fr;
+//       grid-template-columns: 1fr 1fr auto;
+//       grid-template-areas:
+//       "cImg cImg cImg"
+//       "cNum cYear cCat"
+//       "cTitle cTitle cTitle";
+//     }
+//     @include m.tablet {
+//       .cards__item { 
+//         padding-bottom: 2rem;
+//       }
+//     }
+
+//     .card__num {
+//       grid-area: cNum;
+//       span {
+//         color: v.$white;
+//         background-color: v.$red2;
+//         padding: 3px 8px;
+//         font-size: 1.2rem;
+//       }
+//     }
+//     .card__title {
+//       grid-area: cTitle;
+//       color: v.$white;
+//       margin: 0;
+//       line-height: 1.2;
+//       font-size: 1.4rem;
+//     }
+
+//     .card__year {
+//       grid-area: cYear;
+//       color: v.$white;
+//       font-size: 1.2rem;
+//       margin: 4px;
+//     }
+
+//     .card__category {
+//       grid-area: cCat;
+//       span {
+//         color: v.$white;
+//         background-color: v.$red2;
+//         padding: 3px 5px;
+//         border-radius: 3px;
+//         font-size: 1.2rem;
+
+//       }
+//     }
+
+//     .card__img {
+//       grid-area: cImg;
+//       width: 100px;
+//       @include m.tablet {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+// .ranking__inner {
+//   background-color: v.$dark-gray;
+//   max-width: 1000px;
+//   margin: 0 auto;
+// }
+// .ranking__title {
+//   text-align: center;
+// }
+
+// @include m.other {
+//   .ranking {
+//     .cards {
+//       display: grid;
+//       gap: 10px;
+//       grid-template-rows: auto auto auto ;
+//       grid-template-columns: auto auto auto auto auto auto;
+//       grid-template-areas:
+//       "cCard1 cCard1 cCard1 cCard1 cCard1 cCard1 "
+//       "cCard2 cCard2 cCard2 cCard3 cCard3 cCard3"
+//       "cCard4 cCard4 cCard5 cCard5 cCard6 cCard6 ";
+//       place-items: center;
+
+//     }
+
+//     .card--1 {
+//       grid-area:cCard1;
+//       // width: 100%;
+//       // max-width: 270px;
+//     }
+//     .card--2 {
+//       grid-area:cCard2;
+//       // width: 90%;
+//     }
+//     .card--3 {
+//       grid-area:cCard3;
+//       // width: 90%;
+//     }
+//     .card--4 {
+//       grid-area:cCard4;
+//       // width: 90%;
+//     }
+//     .card--5 {
+//       grid-area:cCard5;
+//       // width: 90%;
+//     }
+//     .card--6 {
+//       grid-area:cCard6;
+//       // width: 90%;
+//     }
+//   }
+// }
+
+// .ranking__btn {
+//   padding: 2rem;  
+//   text-align: center;
+// }
   
-
-
-  // .cards {
-    //   display: flex;
-    //   flex-wrap: wrap;
-    // }
-    // .cards__item {
-  //   width: calc(100% / 3 - 200px / 3);
-  // }
-  // .cards__item:not(:nth-child(3n + 1)) {
-  //   margin-left: 100px;
-  // }
-  // .cards__item:nth-child(n+4){
-  //   margin-top: 50px;
-  // }
+  

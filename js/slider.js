@@ -9,7 +9,15 @@ $(document).ready(function(){
     slidesToScroll: 1,
     centerMode: true,
     focusOnSelect: true,
-    slide: 'img',
+    slide: 'div',
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   });
 });
