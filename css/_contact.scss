@@ -7,17 +7,16 @@
   text-align : center;
 }
 .contact-container {
-  // display: block;
-  width: 90%;
+  width: 70%;
   margin-left: 2rem;
+  margin-top: 3rem;
   @include m.tablet{
-    width: 70%;
-    margin: 0 auto;
+    // width: 70%;
+    margin: 3rem auto;
 
   }
   @include m.pc {
     max-width: 960px;
-    margin: 0 auto;
 
   }
   input, select, textarea {

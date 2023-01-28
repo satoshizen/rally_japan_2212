@@ -8,7 +8,7 @@ main {
 
 @include m.tablet{
   .wrapper {
-    margin-top: 6rem;
+    margin-top: 8rem;
  }
 }
 @include m.pc{
@@ -135,9 +135,9 @@ main {
   background-color: v.$dark-gray;
   max-width: 1000px;
   margin: 0 auto;
-  ul { 
-    padding: 1rem;
-  }
+  // ul { 
+  //   padding: 1rem;
+  // }
 }
 .news__title {
   text-align: center;

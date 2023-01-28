@@ -30,7 +30,7 @@ main {
 
 @media screen and (min-width: 550px) {
   .wrapper {
-    margin-top: 6rem;
+    margin-top: 8rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -133,9 +133,6 @@ main {
   background-color: #484343;
   max-width: 1000px;
   margin: 0 auto;
-}
-.news__inner ul {
-  padding: 1rem;
 }
 
 .news__title {
@@ -415,8 +412,24 @@ main {
 }
 
 .logo {
-  width: 250px;
-  transform: translateX(15px) translateY(-15px);
+  width: 200px;
+  transform: translateX(15px) translateY(-10px);
+}
+@media screen and (min-width: 550px) {
+  .logo {
+    display: none;
+  }
+}
+
+.logo-m {
+  display: none;
+}
+@media screen and (min-width: 550px) {
+  .logo-m {
+    display: block;
+    margin: 0 auto;
+    transform: translateX(15px) translateY(-10px);
+  }
 }
 
 .header-logo {
@@ -524,16 +537,16 @@ small {
 }
 
 .container {
-  margin-top: 5rem;
+  margin-top: 7rem;
 }
 
 .news__tag {
-  margin: 3rem auto;
+  padding: 0;
 }
 @media screen and (min-width: 550px) {
   .news__tag {
     max-width: 650px;
-    margin: 3rem auto;
+    margin: 3rem 2rem;
   }
 }
 .news__tag .tag_title {
@@ -591,7 +604,7 @@ small {
 }
 @media screen and (min-width: 550px) {
   .privacy__inner .text {
-    margin: 0 3rem;
+    margin: 3rem;
   }
 }
 
@@ -648,7 +661,7 @@ small {
 
 .kaisha {
   width: 70%;
-  margin: 0 auto;
+  margin: 3rem auto;
 }
 
 .kaisha th,
@@ -695,19 +708,18 @@ small {
 }
 
 .contact-container {
-  width: 90%;
+  width: 70%;
   margin-left: 2rem;
+  margin-top: 3rem;
 }
 @media screen and (min-width: 550px) {
   .contact-container {
-    width: 70%;
-    margin: 0 auto;
+    margin: 3rem auto;
   }
 }
 @media screen and (min-width: 768px) {
   .contact-container {
     max-width: 960px;
-    margin: 0 auto;
   }
 }
 .contact-container input, .contact-container select, .contact-container textarea {
