@@ -37,17 +37,19 @@
       margin: 0;
       padding: 2rem;
       line-height: 1.2;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
     }
 
     .card__year {
       grid-area: cYear;
       color: v.$white;
       font-size: 1rem;
+      padding-left: 1rem;
     }
 
     .card__category {
       grid-area: cCat;
+      padding-left: 1rem;
       span {
         color: v.$white;
         background-color: v.$red2;
@@ -62,14 +64,11 @@
       padding: 2rem;
       font-size: 1.2rem;
     }
-    // .card__img {
-    //   grid-area: cImg;
-    //   // width: 100px;
-    // }
   }
   .cards__item {
     margin-top: 2rem;
     background-color: v.$black;
+    width: 100%;
 
   }
  }

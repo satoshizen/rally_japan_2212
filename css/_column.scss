@@ -1,8 +1,48 @@
 @use "variable" as v;
 @use "mixin" as m;
 
-.column_indiv
-.column__title {
+.cards__item {
+  background-color: v.$black;
+}
+
+.column_indiv {
+  .column__title {
     text-align: center;
+  }
+  .card {
+    .card__title {
+      grid-area: cTitle;
+      color: v.$white;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.2;
+      font-size: 1.6rem;
+      }
+  
+      .card__year {
+        grid-area: cYear;
+        color: v.$white;
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+  
+      .card__category {
+        grid-area: cCat;
+        padding-left: 1rem;
+        span {
+          color: v.$white;
+          background-color: v.$red2;
+          padding: 3px 5px;
+          border-radius: 3px;
+          font-size: 1rem;
+        }
+      }
+  
+      p {
+        color: v.$white;
+        padding: 2rem;
+        font-size: 1.2rem;
+      }
+    }
   }
 

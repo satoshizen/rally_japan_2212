@@ -7,19 +7,22 @@
   text-align : center;
 }
 .contact-container {
+  // display: block;
+  width: 90%;
+  margin-left: 2rem;
+  @include m.tablet{
+    width: 70%;
+    margin: 0 auto;
+
+  }
   @include m.pc {
-    width: 100%;
     max-width: 960px;
-    // text-align: center;
+    margin: 0 auto;
 
   }
   input, select, textarea {
     background-color: v.$green04;
   }
- }
-
- .inner-container{
-    margin: 0 2rem;
  }
  
 div {

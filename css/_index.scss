@@ -116,19 +116,19 @@ main {
     }
   
     .cards__item {
-      margin-top: 2rem;
+      // margin-top: 2rem;
       background-color: v.$black;
       @include m.tablet {
         width: 45%;
       }
     }
   }
-  .cards__item:first-child {
-    margin-top: 0;
-    @include m.tablet {
-      margin-top: 2rem;
-    }
-  }
+  // .cards__item:first-child {
+  //   margin-top: 0;
+  //   @include m.tablet {
+  //     margin-top: 2rem;
+  //   }
+  // }
 
 
 .news__inner {
@@ -148,7 +148,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    margin: 0 auto;
+    margin: 4rem auto 0;
     
   }
 }
