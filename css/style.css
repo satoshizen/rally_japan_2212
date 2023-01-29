@@ -694,9 +694,9 @@ small {
 
 @media screen and (max-width: 767px) {
   .kaisha,
-  .kaisha tr,
-  .kaisha td,
-  .kaisha th {
+.kaisha tr,
+.kaisha td,
+.kaisha th {
     display: block;
   }
   .kaisha th {
@@ -1012,6 +1012,4 @@ input:focus, textarea:focus, select:focus {
   text-transform: uppercase;
 }
 
-/* 文字コードの指定 */
-
-/*# sourceMappingURL=style.css.map */
+/* 文字コードの指定 *//*# sourceMappingURL=style.css.map */
