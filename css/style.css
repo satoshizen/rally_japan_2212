@@ -107,12 +107,15 @@ main {
   border-radius: 3px;
   font-size: 1.2rem;
 }
-.news .card .card__img {
+.news .card .card_image {
   grid-area: cImg;
   width: 100px;
 }
+.news .card .card_image img {
+  height: auto;
+}
 @media screen and (min-width: 550px) {
-  .news .card .card__img {
+  .news .card .card_image {
     width: 100%;
   }
 }
@@ -200,14 +203,17 @@ main {
   border-radius: 3px;
   font-size: 1.2rem;
 }
-.column .card .card__img {
+.column .card .card_image {
   grid-area: cImg;
   width: 100px;
 }
 @media screen and (min-width: 550px) {
-  .column .card .card__img {
+  .column .card .card_image {
     width: 100%;
   }
+}
+.column .card .card_image img {
+  height: auto;
 }
 .column .column__cards .cards__item {
   margin-top: 2rem;
@@ -389,7 +395,7 @@ main {
 }
 
 .header {
-  top: 0;
+  margin-top: 2rem;
   width: 100%;
   background-color: transparent;
   background-color: black;
@@ -404,39 +410,38 @@ main {
 .header-inner.scrolled {
   background-color: #DBE8E7;
 }
+.header-inner.scrolled .header-logo {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  background-color: black;
+}
 .header-inner.scrolled .header-logo a {
   color: #484343;
 }
 .header-inner.scrolled .nav-button i {
   color: #484343;
 }
-
-.logo {
+.header-inner .logo {
+  display: block;
+  margin: 0 auto;
   width: 200px;
   transform: translateX(15px) translateY(-10px);
 }
 @media screen and (min-width: 550px) {
-  .logo {
+  .header-inner .logo {
     display: none;
   }
 }
-
-.logo-m {
+.header-inner .logo-m {
   display: none;
 }
 @media screen and (min-width: 550px) {
-  .logo-m {
+  .header-inner .logo-m {
     display: block;
     margin: 0 auto;
     transform: translateX(15px) translateY(-10px);
   }
-}
-
-.header-logo {
-  display: block;
-  text-align: center;
-  padding: 2rem;
-  background-color: black;
 }
 
 .pc-nav {
@@ -645,6 +650,10 @@ small {
   font-size: 1.2rem;
 }
 
+.slick-slide {
+  height: auto;
+}
+
 .slider-nav .card {
   margin: 10px;
   font-size: 2rem;
@@ -694,9 +703,9 @@ small {
 
 @media screen and (max-width: 767px) {
   .kaisha,
-.kaisha tr,
-.kaisha td,
-.kaisha th {
+  .kaisha tr,
+  .kaisha td,
+  .kaisha th {
     display: block;
   }
   .kaisha th {
@@ -1012,4 +1021,6 @@ input:focus, textarea:focus, select:focus {
   text-transform: uppercase;
 }
 
-/* 文字コードの指定 *//*# sourceMappingURL=style.css.map */
+/* 文字コードの指定 */
+
+/*# sourceMappingURL=style.css.map */
