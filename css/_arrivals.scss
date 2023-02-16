@@ -23,11 +23,6 @@
       "cNum   cYear  cCat "
       "cTitle cTitle cTitle";
     }
-    // @include m.tablet {
-    //   .cards__item { 
-    //     padding-bottom: 2rem;
-    //   }
-    // }
 
     .card__num {
       grid-area: cNum;
@@ -65,7 +60,7 @@
       }
     }
 
-    .card__img {
+    .card_image {
       grid-area: cImg;
       width: 100px;
       @include m.tablet {

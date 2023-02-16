@@ -5,8 +5,16 @@
   .cards__item {
     position: relative;
     display: block;
+  }
 
-
+  .c-slide {
+    .card_image{
+      img{
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 16/9 ;
+      }
+    }
   }
   .slide-t {
     position: absolute;
@@ -43,14 +51,10 @@
 
     }
   }
-    // .card-img {
-    //   position: relative;
-    // }
-  
-  }
   .slick-slide {
     height: auto;
   }
+}
 
 .slider-nav {
     .card {
@@ -62,4 +66,12 @@
     text-align: center;
     background-color: #e0e0e0;
     }
-}
+    .card_image {
+      img{
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 16/9 ;
+      }
+    }
+  }
+
