@@ -114,6 +114,9 @@ main {
 }
 .news .card .card_image img {
   height: auto;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  width: 100%;
 }
 @media screen and (min-width: 550px) {
   .news .card .card_image {
@@ -215,6 +218,9 @@ main {
 }
 .column .card .card_image img {
   height: auto;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
 }
 .column .column__cards .cards__item {
   margin-top: 2rem;
@@ -794,15 +800,15 @@ input:focus, textarea:focus, select:focus {
   margin: 0;
   margin-top: 1rem;
   background-color: #000;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: auto 1fr;
-  grid-template-areas: "cNum cYear cCat cCat  " "cImg cImg  cTitle cTitle";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto auto auto 1fr;
+  grid-template-areas: "cNum cYear cCat   cCat " "cImg cImg  cTitle cTitle";
 }
 @media screen and (min-width: 550px) and (max-width: 767px) {
   .arrivals .cards__item {
     margin-top: 0;
     grid-template-rows: auto auto 1fr;
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: auto auto auto;
     grid-template-areas: "cImg   cImg   cImg" "cNum   cYear  cCat " "cTitle cTitle cTitle";
   }
 }
@@ -840,10 +846,14 @@ input:focus, textarea:focus, select:focus {
 }
 .arrivals .cards__item .card_image {
   grid-area: cImg;
-  width: 100px;
 }
-@media screen and (min-width: 550px) {
-  .arrivals .cards__item .card_image {
+.arrivals .cards__item .card_image img {
+  object-fit: cover;
+  width: 100px;
+  aspect-ratio: 16/9;
+}
+@media screen and (min-width: 550px) and (max-width: 767px) {
+  .arrivals .cards__item .card_image img {
     width: 100%;
   }
 }
@@ -920,14 +930,14 @@ input:focus, textarea:focus, select:focus {
   margin: 0;
   margin-top: 1rem;
   background-color: #000;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: auto 1fr;
-  grid-template-areas: "cNum cYear cCat cCat  " "cImg cImg  cTitle cTitle";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto auto auto 1fr;
+  grid-template-areas: "cNum cYear cCat   cCat  " "cImg cImg  cTitle cTitle";
 }
 @media screen and (min-width: 550px) and (max-width: 767px) {
   .ranking .cards__item {
     margin-top: 0;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 1fr 1fr auto;
     grid-template-areas: "cImg cImg cImg" "cNum cYear cCat" "cTitle cTitle cTitle";
   }
@@ -971,10 +981,14 @@ input:focus, textarea:focus, select:focus {
 }
 .ranking .cards__item .card_image {
   grid-area: cImg;
-  width: 100px;
 }
-@media screen and (min-width: 550px) {
-  .ranking .cards__item .card_image {
+.ranking .cards__item .card_image img {
+  width: 100px;
+  object-fit: cover;
+  aspect-ratio: cover;
+}
+@media screen and (min-width: 550px) and (max-width: 767px) {
+  .ranking .cards__item .card_image img {
     width: 100%;
   }
 }
@@ -982,7 +996,7 @@ input:focus, textarea:focus, select:focus {
 .ranking__inner {
   background-color: #484343;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 2rem;
 }
 
 .ranking__title {

@@ -7,7 +7,6 @@
               <!-- カード -->
               <?php $args = array(
                 'post_type' => 'post', //投稿タイプを指定
-                // 'category_name' => 'news', //カテゴリースラッグ指定
                 'post_per_page' => 6, //6件表示
                 'order'     => 'DESC', //記事の順番変更
               );
@@ -45,7 +44,6 @@
               <!-- カード -->
               <?php $args = array(
                 'post_type' => 'post', //投稿タイプを指定
-                // 'category_name' => 'news', //カテゴリースラッグ指定
                 'post_per_page' => 6, //6件表示
                 'order'     => 'DESC', //記事の順番変更
               );

@@ -8,16 +8,16 @@
     margin: 0;
     margin-top: 1rem;
     background-color: v.$black;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto auto auto 1fr;
     grid-template-areas: 
-      "cNum cYear cCat cCat  "
+      "cNum cYear cCat   cCat "
       "cImg cImg  cTitle cTitle";
 
     @include m.other {
       margin-top: 0;
       grid-template-rows: auto auto 1fr;
-      grid-template-columns: 1fr 1fr auto;
+      grid-template-columns: auto auto auto;
       grid-template-areas:
       "cImg   cImg   cImg"
       "cNum   cYear  cCat "
@@ -62,9 +62,15 @@
 
     .card_image {
       grid-area: cImg;
-      width: 100px;
-      @include m.tablet {
-        width: 100%;
+      img {
+        object-fit: cover;
+        width: 100px;
+        aspect-ratio: 16/9 ;
+      }
+      @include m.other {
+        img {
+          width: 100%;
+        }
       }
     }
   }

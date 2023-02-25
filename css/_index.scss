@@ -106,7 +106,10 @@ main {
       grid-area: cImg;
       width: 100px;
       img{
-      height: auto
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 16/9 ;
+      width: 100%
       }
       @include m.tablet {
         width: 100%;
@@ -224,6 +227,9 @@ main {
       }
       img{
         height: auto;
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 16/9 ;
       }
     }
   }

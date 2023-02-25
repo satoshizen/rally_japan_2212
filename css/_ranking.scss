@@ -8,15 +8,15 @@
     margin: 0;
     margin-top: 1rem;
     background-color: v.$black;
-    grid-template-rows: auto auto auto ;
-    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr ;
+    grid-template-columns: auto auto auto 1fr;
     grid-template-areas: 
-      "cNum cYear cCat cCat  "
+      "cNum cYear cCat   cCat  "
       "cImg cImg  cTitle cTitle";
       
     @include m.other {  //TABLETの時のみ
       margin-top: 0;
-      grid-template-rows: auto auto 1fr;
+      grid-template-rows: auto 1fr;
       grid-template-columns: 1fr 1fr auto;
       grid-template-areas:
       "cImg cImg cImg"
@@ -67,9 +67,16 @@
 
     .card_image {
       grid-area: cImg;
-      width: 100px;
-      @include m.tablet {
-        width: 100%;
+      img {
+        width: 100px;
+        object-fit: cover;
+        aspect-ratio: cover;
+
+      }
+      @include m.other {
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -78,7 +85,7 @@
 .ranking__inner {
   background-color: v.$dark-gray;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 2rem;
 }
 .ranking__title {
   text-align: center;
