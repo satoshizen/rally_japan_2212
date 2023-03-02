@@ -67,7 +67,8 @@ main {
 .cards {
   width: 100%;
   max-width: 980px;
-  margin-top: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 .news .card {
@@ -102,6 +103,7 @@ main {
   grid-area: cCat;
 }
 .news .card .card__category span {
+  display: inline;
   color: #fff;
   background-color: #D40F0F;
   padding: 3px 5px;
@@ -128,6 +130,8 @@ main {
   margin-bottom: 2rem;
 }
 .news__cards .cards__item {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: #000;
 }
 @media screen and (min-width: 550px) {
@@ -224,6 +228,7 @@ main {
 }
 .column .column__cards .cards__item {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: #000;
 }
 @media screen and (min-width: 550px) {
@@ -402,14 +407,26 @@ main {
 }
 
 .header {
+  position: fixed;
+  top: -20px;
   margin-top: 2rem;
   width: 100%;
-  background-color: transparent;
+  height: 13rem;
   background-color: black;
+  z-index: 100;
+}
+@media screen and (min-width: 550px) {
+  .header {
+    height: 20rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 23rem;
+  }
 }
 
 .header-inner {
-  position: fixed;
   width: 100%;
   transition: 0.5s;
   z-index: 10;
@@ -571,6 +588,19 @@ small {
   border-radius: 1rem;
 }
 
+.card__category {
+  grid-area: cCat;
+  padding-left: 1rem;
+}
+.card__category .category-name {
+  display: inline;
+  color: #fff;
+  background-color: #D40F0F;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
 .news_indiv .card .card__title {
   grid-area: cTitle;
   color: #fff;
@@ -634,7 +664,7 @@ small {
   bottom: 0;
   color: #fff;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* 半透明の背景。 */
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景。 */
 }
 .slider-for .slide-t .card__title {
   font-size: 1.6rem;
@@ -798,33 +828,25 @@ input:focus, textarea:focus, select:focus {
   display: grid;
   gap: 10px;
   margin: 0;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: #000;
   grid-template-rows: auto 1fr;
   grid-template-columns: auto auto auto 1fr;
-  grid-template-areas: "cNum cYear cCat   cCat " "cImg cImg  cTitle cTitle";
+  grid-template-areas: "cYear cYear cCat   cCat " "cImg  cImg  cTitle cTitle";
 }
 @media screen and (min-width: 550px) and (max-width: 767px) {
   .arrivals .cards__item {
     margin-top: 0;
     grid-template-rows: auto auto 1fr;
     grid-template-columns: auto auto auto;
-    grid-template-areas: "cImg   cImg   cImg" "cNum   cYear  cCat " "cTitle cTitle cTitle";
+    grid-template-areas: "cImg   cImg   cImg" "cYear  cCat cCat" "cTitle cTitle cTitle";
   }
-}
-.arrivals .cards__item .card__num {
-  grid-area: cNum;
-}
-.arrivals .cards__item .card__num span {
-  color: #fff;
-  background-color: #D40F0F;
-  padding: 3px 8px;
-  font-size: 1.2rem;
 }
 .arrivals .cards__item .card__title {
   grid-area: cTitle;
   color: #fff;
-  margin: 0;
+  margin: 4px;
   line-height: 1.2;
   font-size: 1.4rem;
 }
@@ -886,6 +908,20 @@ input:focus, textarea:focus, select:focus {
   text-align: center;
 }
 
+.arrivals__btn {
+  padding: 2rem;
+  text-align: center;
+}
+.arrivals__btn .btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  min-width: 300px;
+  background-color: #000;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
 .cards__item {
   background-color: #000;
 }
@@ -928,10 +964,11 @@ input:focus, textarea:focus, select:focus {
   display: grid;
   gap: 10px;
   margin: 0;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background-color: #000;
   grid-template-rows: auto 1fr;
-  grid-template-columns: auto auto auto 1fr;
+  grid-template-columns: auto;
   grid-template-areas: "cNum cYear cCat   cCat  " "cImg cImg  cTitle cTitle";
 }
 @media screen and (min-width: 550px) and (max-width: 767px) {
@@ -949,6 +986,7 @@ input:focus, textarea:focus, select:focus {
 }
 .ranking .cards__item .card__num {
   grid-area: cNum;
+  margin-left: 0.5rem;
 }
 .ranking .cards__item .card__num span {
   color: #fff;
@@ -959,7 +997,7 @@ input:focus, textarea:focus, select:focus {
 .ranking .cards__item .card__title {
   grid-area: cTitle;
   color: #fff;
-  margin: 0;
+  margin: 0.5rem;
   line-height: 1.2;
   font-size: 1.4rem;
 }
@@ -971,6 +1009,7 @@ input:focus, textarea:focus, select:focus {
 }
 .ranking .cards__item .card__category {
   grid-area: cCat;
+  margin-right: 0.5rem;
 }
 .ranking .cards__item .card__category span {
   color: #fff;
@@ -991,12 +1030,6 @@ input:focus, textarea:focus, select:focus {
   .ranking .cards__item .card_image img {
     width: 100%;
   }
-}
-
-.ranking__inner {
-  background-color: #484343;
-  max-width: 1000px;
-  margin: 2rem;
 }
 
 .ranking__title {

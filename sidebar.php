@@ -13,7 +13,7 @@
         <?php $args = array(
           'post_type' => 'post', //投稿タイプを指定
           // 'category_name' => 'news', //カテゴリースラッグ指定
-          'post_per_page' => 6, //6件表示
+          'posts_per_page' => 6, //6件表示
           'order'     => 'DESC', //記事の順番変更
         );
         $post_query = new WP_Query($args);
@@ -47,11 +47,6 @@
         <?php endif; ?>
 
       </div>
-      <!-- ボタンの囲い -->
-      <div class="ranking__btn">
-        <!-- ボタン -->
-        <a href="" class="btn">もっと見る</a>
-      </div>
     </div>
   </section>
   <!-- NEW ARRIVALSセクション -->
@@ -68,7 +63,7 @@
         <?php $args = array(
           'post_type' => 'post', //投稿タイプを指定
           // 'category_name' => 'news', //カテゴリースラッグ指定
-          'post_per_page' => 6, //6件表示
+          'posts_per_page' => 6, //6件表示
           'order'     => 'DESC', //記事の順番変更
         );
         $post_query = new WP_Query($args);
@@ -79,9 +74,6 @@
             <a href="<?php the_permalink(); ?>" class="cards__item card">
               <h3 class="card__title">
                 <?php the_title(); ?></h3>
-              <div class="card__num">
-                <span>1</span>
-              </div>
               <span class="card__year">
                 <?php the_time('Y年m月d日'); ?></span>
               <div class="card__category">
@@ -92,15 +84,15 @@
               </div>
             </a>
           <?php endwhile; ?>
+          <div class="arrivals__btn">
+            <!-- ボタン -->
+            <a href="" class="btn">もっと見る</a>
+          </div>
         <?php else : ?>
           <!-- // 記事がない場合 -->
           <p>記事が見つかりません。</p>
         <?php endif; ?>
         <!-- ボタンの囲い -->
-        <div class="ranking__btn">
-          <!-- ボタン -->
-          <a href="" class="btn">もっと見る</a>
-        </div>
       </div>
   </section>
 

@@ -6,10 +6,11 @@
     display: grid;
     gap: 10px;
     margin: 0;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     background-color: v.$black;
     grid-template-rows: auto 1fr ;
-    grid-template-columns: auto auto auto 1fr;
+    grid-template-columns: auto;
     grid-template-areas: 
       "cNum cYear cCat   cCat  "
       "cImg cImg  cTitle cTitle";
@@ -31,6 +32,7 @@
 
     .card__num {
       grid-area: cNum;
+      margin-left: .5rem;
       span {
         color: v.$white;
         background-color: v.$red2;
@@ -41,7 +43,7 @@
     .card__title {
       grid-area: cTitle;
       color: v.$white;
-      margin: 0;
+      margin: .5rem;
       line-height: 1.2;
       font-size: 1.4rem;
     }
@@ -55,6 +57,7 @@
 
     .card__category {
       grid-area: cCat;
+      margin-right: .5rem;
       span {
         color: v.$white;
         background-color: v.$red2;
@@ -82,11 +85,7 @@
   }
 }
 
-.ranking__inner {
-  background-color: v.$dark-gray;
-  max-width: 1000px;
-  margin: 2rem;
-}
+
 .ranking__title {
   text-align: center;
 }

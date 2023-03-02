@@ -14,17 +14,24 @@
           </h2>
           <!-- カテゴリー群 -->
           <ul class="news__tag">
-          <?php if (have_posts() ) : ?>
-              <?php while (have_posts() ) : the_post();  ?>
-
             <li class="tag_title">
-              <p><?php the_tags( '', ' / ' ); ?></p>
+              <p>news</p>
             </li>
-            <?php endwhile; ?>
-                <?php else : ?>
-                  <!--  記事がない場合 -->
-                  <p>記事が見つかりません。</p>
-                  <?php endif; ?>
+            <li class="tag_title">
+              <p>ニュース05</p>
+            </li>
+            <li class="tag_title">
+              <p>news03</p>
+            </li>
+            <li class="tag_title">
+              <p>カテゴリー</p>
+            </li>                
+            <li class="tag_title">
+              <p>カテゴリー</p>
+            </li>
+            <li class="tag_title">
+              <p>カテゴリー</p>
+            </li>
           </ul>
           <!-- カード群 -->
           <div class="news__cards cards">
@@ -36,28 +43,19 @@
                   <h3 class="card__title"><?php the_title(); ?>
                   </h3>
                   <span class="card__year">
-                    <?php the_time('Y年m月d日'); ?>
-                  </span>
-
-                  <span class="card__category">
-                    <?php
-                      $cat = get_the_category();
-                      $cat = $cat[0]; 
-                      ?>
-                    <p class="category-name">
-                      <?php echo $cat->cat_name; ?>
-                    </p>
-                  </span>
-
+                    <?php the_time('Y年m月d日'); ?></span>
+                  <div class="card__category">
+                    <span>カテゴリー1</span>
+                  </div>
                   <div class="card_image">
-                    <?php the_post_thumbnail('array(256,160)'); ?>
+                  <?php the_post_thumbnail('array(256,160)'); ?>
                   </div>
                 </a>
                 <?php endwhile; ?>
                 <?php else : ?>
-                  <!--  記事がない場合 -->
-                  <p>記事が見つかりません。</p>
-                  <?php endif; ?>
+                <!--  記事がない場合 -->
+                <p>記事が見つかりません。</p>
+            <?php endif; ?>
 
 
           </div>

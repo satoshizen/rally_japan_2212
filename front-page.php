@@ -101,15 +101,15 @@
                             </div>
                           </a>
                         <?php endwhile; ?>
+                        <!-- ボタンの囲い -->
+                        <div class="news__btn">
+                          <!-- ボタン -->
+                          <a href="" class="btn">もっと見る</a>
+                        </div>
                       <?php else : ?>
                         <!-- // 記事がない場合 -->
                         <p>記事が見つかりません。</p>
                       <?php endif; ?>
-                    </div>
-                    <!-- ボタンの囲い -->
-                    <div class="news__btn">
-                      <!-- ボタン -->
-                      <a href="" class="btn">もっと見る</a>
                     </div>
                   </div>
                 </section>
@@ -148,16 +148,16 @@
                             </div>
                           </a>
                         <?php endwhile; ?>
+                        <!-- ボタンの囲い -->
+                        <div class="column__btn">
+                          <!-- ボタン -->
+                          <a href="" class="btn">もっと見る</a>
+                        </div>
                       <?php else : ?>
                         <!-- // 記事がない場合 -->
                         <p>記事が見つかりません。</p>
                       <?php endif; ?>
                       </a>
-                    </div>
-                    <!-- ボタンの囲い -->
-                    <div class="column__btn">
-                      <!-- ボタン -->
-                      <a href="" class="btn">もっと見る</a>
                     </div>
                   </div>
                 </section>

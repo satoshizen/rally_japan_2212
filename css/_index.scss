@@ -36,7 +36,6 @@ main {
   font-weight: bold;
   color: v.$white;
   background-color: v.$red2;
-  // margin: 0;
   padding: 1rem 0;
   
 }
@@ -51,7 +50,9 @@ main {
 .cards {
   width: 100%;
   max-width: 980px;
-  margin-top: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
   // justify-content: center;
 }
 
@@ -93,6 +94,7 @@ main {
     .card__category {
       grid-area: cCat;
       span {
+        display: inline;
         color: v.$white;
         background-color: v.$red2;
         padding: 3px 5px;
@@ -123,6 +125,8 @@ main {
     }
   
     .cards__item {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
       background-color: v.$black;
       @include m.tablet {
         width: 45%;
@@ -236,6 +240,7 @@ main {
   .column__cards {
     .cards__item {
       margin-top: 2rem;
+      margin-bottom: 2rem;
       background-color: v.$black;
       @include m.tablet {
         width: 45%;

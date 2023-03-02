@@ -14,6 +14,10 @@
 
   <!-- ヘッダー -->
   <header class="header">
+    <section>
+      <div class="cover">
+        <p>itikuro-sanaka</p>
+
     <!-- ここにヘッダーが入ります -->
     <div class="header-inner">
       <div class="button">
@@ -40,6 +44,8 @@
           'items_wrap' => '<ul id="%1$s" class="%2$s pc-nav-list">%3$s</ul>',
           'menu' => 'global-navigation'
         )); ?>
+      </div>
+    </section>
 
     </div>
   </header>
