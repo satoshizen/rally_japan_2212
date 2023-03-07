@@ -135,7 +135,7 @@
                       ?>
                         <?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
 
-                          <a href="column_indiv.html" class="cards__item card">
+                          <a href="<?php the_permalink(); ?>" class="cards__item card">
                             <h3 class="card__title">
                               <?php the_title(); ?></h3>
                             <span class="card__year">

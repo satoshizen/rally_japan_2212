@@ -13,29 +13,15 @@
             最新ニュース
           </h2>
           <!-- カテゴリー群 -->
-          <ul class="news__tag">
-            <li class="tag_title">
-              <p>news</p>
-            </li>
-            <li class="tag_title">
-              <p>ニュース05</p>
-            </li>
-            <li class="tag_title">
-              <p>news03</p>
-            </li>
-            <li class="tag_title">
-              <p>カテゴリー</p>
-            </li>                
-            <li class="tag_title">
-              <p>カテゴリー</p>
-            </li>
-            <li class="tag_title">
-              <p>カテゴリー</p>
-            </li>
-          </ul>
+          <div class="news-category">
+            <!-- <ul class="category-title"> -->
+              <?php $args = array(
+                'title_li' => ''              );
+              wp_list_categories($args);
+              ?>
+            <!-- </ul> -->
           <!-- カード群 -->
           <div class="news__cards cards">
-
             <!-- カード -->
             <?php if (have_posts() ) : ?>
               <?php while (have_posts() ) : the_post();  ?>

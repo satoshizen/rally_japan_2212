@@ -5,34 +5,13 @@
     <div class="main-container">
 
   <!-- NEWSセクション -->
-      <section class="news">
+      <section class="news_indiv">
         <!-- インナー -->
         <div class="news__inner">
         <!-- タイトル -->
           <h2 class="news__title section-title" data-en="news">
             最新ニュース
           </h2>
-          <!-- カテゴリー群 -->
-          <ul class="news__tag">
-            <li class="tag_title">
-              <p>カテゴリー</p>
-            </li>
-            <li class="tag_title">
-              <p>カテゴリー</p>
-            </li>
-            <li class="tag_title">
-              <p>カテゴリー</p>
-            </li>
-            <li class="tag_title">
-              <p>カテゴリー</p>
-            </li>                
-            <li class="tag_title">
-              <p>カテゴリー</p>
-            </li>
-            <li class="tag_title">
-              <p>カテゴリー</p>
-            </li>
-          </ul>
           <!-- カード群 -->
           <div class="news__cards cards">
 
@@ -56,11 +35,6 @@
                 <p>記事が見つかりません。</p>
             <?php endif; ?>
 
-          </div>
-          <!-- ボタンの囲い -->
-          <div class="news__btn">
-            <!-- ボタン -->
-            <a href="" class="btn">もっと見る</a>
           </div>
         </div>
       </section>
