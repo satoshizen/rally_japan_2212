@@ -25,7 +25,6 @@
             </div>
             <!-- カード群 -->
             <div class="news__cards cards">
-
               <!-- カード -->
               <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post();  ?>
@@ -37,13 +36,15 @@
                     </span>
 
                     <span class="card__category">
-                      <?php
-                      $cat = get_the_category();
-                      $cat = $cat[0];
-                      ?>
-                      <p class="category-name">
-                        <?php echo $cat->cat_name; ?>
-                      </p>
+                      <ul>   
+                        <?php     
+                          // カテゴリー名の繰り返し表示
+                          $categories = get_the_category();
+                          foreach( $categories as $category ):
+                        ?>
+                        <li><?php echo $category->name; ?></li>
+                        <?php endforeach;?>
+                      </ul>
                     </span>
 
                     <div class="card_image">
@@ -51,17 +52,15 @@
                     </div>
                   </a>
                 <?php endwhile; ?>
-              <?php else : ?>
-                <!--  記事がない場合 -->
-                <p>記事が見つかりません。</p>
-              <?php endif; ?>
-
-
+                <?php else : ?>
+                  <!--  記事がない場合 -->
+                  <p>記事が見つかりません。</p>
+                  <?php endif; ?>
             </div>
             <!-- ボタンの囲い -->
-            <div class="news__btn">
+            <div class="pagenavi">
               <!-- ボタン -->
-              <a href="" class="btn">もっと見る</a>
+              <?php wp_pagenavi(); ?>
             </div>
           </div>
         </section>

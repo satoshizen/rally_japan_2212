@@ -94,22 +94,30 @@
                             <span class="card__year">
                               <?php the_time('Y年m月d日'); ?></span>
                             <div class="card__category">
-                              <span>カテゴリー</span>
+                              <ul>   
+                                <?php     
+                                  // カテゴリー名の繰り返し表示
+                                  $categories = get_the_category();
+                                  foreach( $categories as $category ):
+                                ?>
+                                <li><?php echo $category->name; ?></li>
+                                <?php endforeach;?>
+                              </ul>
                             </div>
                             <div class="card_image">
                               <?php the_post_thumbnail('array(256,160)'); ?>
                             </div>
                           </a>
                         <?php endwhile; ?>
-                        <!-- ボタンの囲い -->
-                        <div class="news__btn">
-                          <!-- ボタン -->
-                          <a href="" class="btn">もっと見る</a>
-                        </div>
-                      <?php else : ?>
-                        <!-- // 記事がない場合 -->
-                        <p>記事が見つかりません。</p>
-                      <?php endif; ?>
+                        <?php else : ?>
+                          <!-- // 記事がない場合 -->
+                          <p>記事が見つかりません。</p>
+                          <?php endif; ?>
+                    </div>
+                    <!-- ボタンの囲い -->
+                    <div class="news__btn">
+                      <!-- ボタン -->
+                      <a href="<?php echo home_url('category/news/') ?>" class="btn">もっと見る</a>
                     </div>
                   </div>
                 </section>
@@ -141,24 +149,32 @@
                             <span class="card__year">
                               <?php the_time('Y年m月d日'); ?></span>
                             <div class="card__category">
-                              <span>カテゴリー</span>
+                              <ul>   
+                                  <?php     
+                                    // カテゴリー名の繰り返し表示
+                                    $categories = get_the_category();
+                                    foreach( $categories as $category ):
+                                  ?>
+                                  <li><?php echo $category->name; ?></li>
+                                  <?php endforeach;?>
+                                </ul>
                             </div>
                             <div class="card_image">
                               <?php the_post_thumbnail('array(256,160)'); ?>
                             </div>
                           </a>
                         <?php endwhile; ?>
+                        <?php else : ?>
+                          <!-- // 記事がない場合 -->
+                          <p>記事が見つかりません。</p>
+                          <?php endif; ?>
+                        </a>
+                      </div>
                         <!-- ボタンの囲い -->
                         <div class="column__btn">
                           <!-- ボタン -->
-                          <a href="" class="btn">もっと見る</a>
+                          <a href="<?php echo home_url('/column') ?>" class="btn">もっと見る</a>
                         </div>
-                      <?php else : ?>
-                        <!-- // 記事がない場合 -->
-                        <p>記事が見つかりません。</p>
-                      <?php endif; ?>
-                      </a>
-                    </div>
                   </div>
                 </section>
               </div>

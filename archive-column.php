@@ -27,13 +27,20 @@
                 <!-- カード -->
                 <?php if (have_posts()) : ?>
                   <?php while (have_posts()) : the_post();  ?>
-
                     <a href="<?php the_permalink(); ?>" class="cards__item card">
                       <h3 class="card__title">
                         <?php the_title(); ?></h3>
                       <span class="card__year"><?php the_time('Y年m月d日'); ?></span>
                       <div class="card__category">
-                        <span>カテゴリー1</span>
+                      <ul>   
+                        <?php     
+                          // カテゴリー名の繰り返し表示
+                          $categories = get_the_category();
+                          foreach( $categories as $category ):
+                        ?>
+                        <li><?php echo $category->name; ?></li>
+                        <?php endforeach;?>
+                      </ul>
                       </div>
                       <div class="card_image">
                         <?php the_post_thumbnail('array(256,160)'); ?>
@@ -44,14 +51,14 @@
                   <!--  記事がない場合 -->
                   <p>記事が見つかりません。</p>
                 <?php endif; ?>
-
               </div>
               <!-- ボタンの囲い -->
-              <div class="column__btn">
+              <div class="pagenavi">
                 <!-- ボタン -->
-                <a href="" class="btn">もっと見る</a>
+                <?php wp_pagenavi(); ?>
               </div>
             </div>
+          </div>
         </section>
       </div>
 

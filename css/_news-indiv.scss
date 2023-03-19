@@ -1,164 +1,44 @@
 @use "variable" as v;
 @use "mixin" as m;
 
-// .container {
-//   @include m.tablet {
-//     margin-top: 19rem;
-//   }
-// }
+.news_indiv {
+  background-color: v.$black;
 
-.news-category {
-  @include m.tablet {
-    margin-left: 2rem;
-  }
-  li{
-    display: inline-block;
-    padding: 0 8px;
-    margin-bottom: .5rem;
-    background-color: v.$red1;
-    border-radius: 1rem;
+
+  .indiv-inner{
+    color: v.$white;
+    padding: 2rem;
+    .indiv-title {
+      line-height: 1.25;
+      margin: 0;
+    }
+    .indiv-image {
+      margin-top: 1rem;
+      max-height: 400px;
+      text-align: center;
+
+    }
+
+    .indiv-category {
+      UL {
+        padding: 0;
+      }
+      li {
+        display: inline;
+        color: v.$white;
+        background-color: v.$red2;
+        padding: 3px 5px;
+        border-radius: 3px;
+        font-size: 1rem;
+          
+      }
+    }
+    // .indiv-text {
+    //   background-color: v.$black;
+    // }
   }
 }
-  .card__category {
-    grid-area: cCat;
-    padding-left: 1rem;
-    .category-name {
-      display: inline;
-      color: v.$white;
-      background-color: v.$red2;
-      padding: 3px 5px;
-      border-radius: 3px;
-      font-size: 1rem;
-    }
-  }
-
-  .news_indiv {
-  
-    .news__cards {
-      // display: flex;
-      // flex-direction: column;
-      // gap: 2rem;
-  
-      // @include m.tablet {
-      //   flex-direction: row;
-      //   flex-wrap: wrap;
-      //   justify-content: center;
-      //   margin: 4rem auto 0;
-      // }
-
-
-      .card {
-        display: grid;
-        gap: 10px;
-        grid-template-rows: auto auto;
-        grid-template-columns: auto auto;
-        grid-template-areas: 
-          "cYear cCat cCat  "
-          "cImg  cTitle cTitle";
-        @include m.tablet {
-          grid-template-rows: auto 1fr;
-          grid-template-columns: auto 1fr;
-          grid-template-areas: 
-          "cImg   cImg "
-          "cYear  cCat  "
-          "cTitle cTitle";
-          }
-        
-        .card__title {
-          grid-area: cTitle;
-          color: v.$white;
-          margin: 0;
-          line-height: 1.2;
-          font-size: 1.4rem;
-          padding: .5rem;
-        }
-    
-        .card__year {
-          grid-area: cYear;
-          color: v.$white;
-          font-size: 1.2rem;
-          margin: 4px;
-        }
-    
-        .card__category {
-          grid-area: cCat;
-          span {
-            display: inline;
-            color: v.$white;
-            background-color: v.$red2;
-            padding: 3px 5px;
-            border-radius: 3px;
-            font-size: 1.2rem;
-          }
-        }
-    
-        .card_image{
-          grid-area: cImg;
-          width: 100px;
-          img{
-          height: auto;
-          object-fit: cover;
-          aspect-ratio: 16/9 ;
-          width: 100%
-          }
-          @include m.tablet {
-            width: 100%;
-          }
-        }
-      }
-  }
-    
-      .cards__item {
-        // margin-top: 2rem;
-        // margin-bottom: 2rem;
-        background-color: v.$black;
-        // @include m.tablet {
-        //   width: 45%;
-        // }
-      }
-    }
-  
-//   .news_indiv {
-
-//   .card {
-//     .card__title {
-//       grid-area: cTitle;
-//       color: v.$white;
-//       margin: 0;
-//       padding: 2rem;
-//       line-height: 1.2;
-//       font-size: 1.6rem;
-//     }
-
-//     .card__year {
-//       grid-area: cYear;
-//       color: v.$white;
-//       font-size: 1rem;
-//       padding-left: 1rem;
-//     }
-
-//     .card__category {
-//       grid-area: cCat;
-//       padding-left: 1rem;
-//       span {
-//         color: v.$white;
-//         background-color: v.$red2;
-//         padding: 3px 5px;
-//         border-radius: 3px;
-//         font-size: 1rem;
-//       }
-//     }
-
-//     p {
-//       color: v.$white;
-//       padding: 2rem;
-//       font-size: 1.2rem;
-//     }
-//   }
-//   .cards__item {
-//     margin-top: 2rem;
-//     background-color: v.$black;
-//     width: 100%;
-
-//   }
-//  }
+.page {
+  text-align: center;
+  color: v.$white;
+}

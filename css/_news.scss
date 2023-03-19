@@ -22,7 +22,7 @@
   .card__category {
     grid-area: cCat;
     padding-left: 1rem;
-    .category-name {
+    li {
       display: inline;
       color: v.$white;
       background-color: v.$red2;

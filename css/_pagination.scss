@@ -1,0 +1,57 @@
+@use "variable" as v;
+
+.pagenavi {
+  margin-top: 2rem;  
+  margin-bottom: 4rem;  
+
+  }
+
+.wp-pagenavi {
+  display: flex;
+  justify-content: center;
+  // border: solid 2px v.$black;
+  // border-radius: 9999px;
+  // overflow: hidden;
+  // list-style: none;
+  // padding: 0;
+
+  span,
+  a {
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background: v.$black;
+    font-size: 14px;
+    color: v.$white;
+    font-weight: bold;
+    transition: all 0.15s linear;
+
+    & + * {
+      border-left: solid 2px v.$black;
+    }
+  }
+
+  .previouspostslink,
+  .nextpostslink {
+    font-size: 20px;
+  }
+
+  span.current {
+    background: v.$red2;
+    color: #fff;
+    pointer-events: none;
+    border-left: solid 2px v.$black;
+  }
+
+  a:hover {
+    background: v.$white;
+    color: v.$red2;
+    border-left: solid 2px v.$black;
+  }
+}
