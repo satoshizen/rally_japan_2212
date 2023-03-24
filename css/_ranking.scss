@@ -59,18 +59,16 @@
     .card__category {
       grid-area: cCat;
       margin-right: .5rem;
-      span {
-        color: v.$white;
-        background-color: v.$red2;
-        padding: 3px 5px;
-        border-radius: 3px;
-        font-size: 1.2rem;
+      ul {
+        margin: 0;
+        padding: 0;
 
       }
     }
 
     .card_image {
       grid-area: cImg;
+      width: 100%;
       img {
         width: 100px;
         object-fit: cover;

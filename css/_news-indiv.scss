@@ -38,7 +38,11 @@
     // }
   }
 }
-.page {
-  text-align: center;
+.page-section {
+  display: flex;
+  justify-content: space-between;
+  // text-align: center;
   color: v.$white;
+  background-color: v.$red2;
+  margin: 2rem;
 }

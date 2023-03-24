@@ -1,17 +1,9 @@
 @use "variable" as v;
 @use "mixin" as m;
 
-.privacy__inner{
-  
-  .privacy__title{
-    text-align: center;
-  }
-  
-  .text {
-    color: v.$white;
-    margin: 0 1rem;
-    @include m.tablet {
-      margin: 3rem;
-    }
-  }
-}
+// .content-area {
+//   color: v.$white;
+//   background-color: v.$black;
+//   margin-top: 2rem;
+//   padding: 2rem;
+// }

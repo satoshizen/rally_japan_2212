@@ -82,7 +82,7 @@ main {
       "cYear cCat cCat  "
       "cImg  cTitle cTitle";
     @include m.tablet {
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto auto 1fr;
       grid-template-columns: auto 1fr;
       grid-template-areas: 
       "cImg   cImg "

@@ -33,7 +33,7 @@
             <?php endif; ?>
           </div>
         </section>
-        <div class="page">
+        <div class="page-section">
           <?php previous_post_link('&laquo; %link', '前の記事へ',true); ?>
           <?php next_post_link('%link &raquo;', '次の記事へ',true); ?>
         </div>

@@ -33,9 +33,17 @@
               </div>
               <span class="card__year">
                 <?php the_time('Y年m月d日'); ?></span>
-              <div class="card__category">
-                <span>カテゴリー</span>
-              </div>
+                <div class="card__category">
+                  <ul>   
+                    <?php     
+                      // カテゴリー名の繰り返し表示
+                      $categories = get_the_category();
+                      foreach( $categories as $category ):
+                    ?>
+                    <li><?php echo $category->name; ?></li>
+                    <?php endforeach;?>
+                  </ul>
+                </div>
               <div class="card_image">
                 <?php the_post_thumbnail('array(256,160)'); ?>
               </div>
@@ -61,7 +69,7 @@
       <div class="arrivals__cards cards">
         <!-- カード -->
         <?php $args = array(
-          'post_type' => 'post', //投稿タイプを指定
+          'post_type' => array('column', 'post'), //投稿タイプを指定
           // 'category_name' => 'news', //カテゴリースラッグ指定
           'posts_per_page' => 6, //6件表示
           'order'     => 'DESC', //記事の順番変更
@@ -76,9 +84,17 @@
                 <?php the_title(); ?></h3>
               <span class="card__year">
                 <?php the_time('Y年m月d日'); ?></span>
-              <div class="card__category">
-                <span>カテゴリー</span>
-              </div>
+                <div class="card__category">
+                              <ul>   
+                                <?php     
+                                  // カテゴリー名の繰り返し表示
+                                  $categories = get_the_category();
+                                  foreach( $categories as $category ):
+                                ?>
+                                <li><?php echo $category->name; ?></li>
+                                <?php endforeach;?>
+                              </ul>
+                            </div>
               <div class="card_image">
                 <?php the_post_thumbnail('array(256,160)'); ?>
               </div>

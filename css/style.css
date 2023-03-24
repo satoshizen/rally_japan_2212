@@ -100,7 +100,7 @@ main {
 }
 @media screen and (min-width: 550px) {
   .news .card {
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr;
     grid-template-columns: auto 1fr;
     grid-template-areas: "cImg   cImg " "cYear  cCat  " "cTitle cTitle";
   }
@@ -602,19 +602,6 @@ small {
   font-size: 1rem;
 }
 
-.privacy__inner .privacy__title {
-  text-align: center;
-}
-.privacy__inner .text {
-  color: #fff;
-  margin: 0 1rem;
-}
-@media screen and (min-width: 550px) {
-  .privacy__inner .text {
-    margin: 3rem;
-  }
-}
-
 .slider-for .cards__item {
   position: relative;
   display: block;
@@ -680,18 +667,33 @@ small {
   margin: 0;
   font-size: 16px;
 }
-.company__inner .company__title .jp {
+.company__inner .company__title .title-en {
   display: block;
   font-size: 24px;
 }
 
+.content-area {
+  color: #fff;
+  background-color: #000;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
 .kaisha {
-  width: 70%;
-  margin: 3rem auto;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .kaisha {
+    max-width: 550px;
+  }
 }
 
 .kaisha th,
 .kaisha td {
+  background-color: #000;
   color: #fff;
   margin: 0 1rem;
   border: 1px solid #ccc;
@@ -830,12 +832,9 @@ input:focus, textarea:focus, select:focus {
 .arrivals .cards__item .card__category {
   grid-area: cCat;
 }
-.arrivals .cards__item .card__category span {
-  color: #fff;
-  background-color: #D40F0F;
-  padding: 3px 5px;
-  border-radius: 3px;
-  font-size: 1.2rem;
+.arrivals .cards__item .card__category ul {
+  margin: 0;
+  padding: 0;
 }
 .arrivals .cards__item .card_image {
   grid-area: cImg;
@@ -983,15 +982,13 @@ input:focus, textarea:focus, select:focus {
   grid-area: cCat;
   margin-right: 0.5rem;
 }
-.ranking .cards__item .card__category span {
-  color: #fff;
-  background-color: #D40F0F;
-  padding: 3px 5px;
-  border-radius: 3px;
-  font-size: 1.2rem;
+.ranking .cards__item .card__category ul {
+  margin: 0;
+  padding: 0;
 }
 .ranking .cards__item .card_image {
   grid-area: cImg;
+  width: 100%;
 }
 .ranking .cards__item .card_image img {
   width: 100px;
@@ -1079,9 +1076,12 @@ input:focus, textarea:focus, select:focus {
   font-size: 1rem;
 }
 
-.page {
-  text-align: center;
+.page-section {
+  display: flex;
+  justify-content: space-between;
   color: #fff;
+  background-color: #D40F0F;
+  margin: 2rem;
 }
 
 .pagenavi {

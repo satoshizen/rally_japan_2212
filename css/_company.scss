@@ -7,20 +7,33 @@
     text-align: center;
     margin: 0;
     font-size: 16px;
-    .jp {
+    .title-en {
       display: block;
       font-size: 24px;
     }
   }
 }
 
+.content-area {
+  color: v.$white;
+  background-color: v.$black;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
 .kaisha {
-  width: 70%;
-  margin: 3rem auto;
+  color: v.$white;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  @include m.pc {
+    max-width: 550px;
+  }
 }
 
 .kaisha th,
 .kaisha td {
+  background-color: v.$black;
   color: v.$white;
   margin: 0 1rem;
   border: 1px solid #ccc;
