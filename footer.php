@@ -13,8 +13,13 @@
             <div class="footer-body">
               <ul class="footer-sns">
                   <li class="twitter"><a href="https://twitter.com/TwitterJP" target="_blank">
-                      <i class="fab fa-twitter" aria-label="twitter"></i></a></li>
-                  <li class="fb"><a href="https://www.facebook.com/facebook.com/facebookapp.japan/" target="_blank"><i class="fab fa-facebook-f"aria-label="facebook"></i></a></li>    
+                    <i class="fab fa-twitter" aria-label="twitter"></i></a></li>
+
+                  <li class="fb"><a href="https://www.facebook.com/facebook.com/facebookapp.japan/" target="_blank">
+                    <i class="fab fa-facebook-f"aria-label="facebook"></i></a></li>
+
+                  <li class="instagram"><a href="https://www.instagram.com/" class="flowbtn7 insta_btn7" target="_blank">
+                    <i class="fab fa-brands fa-instagram" aria-label="instagram"></i></a></li>    
               </ul>
           </div>
 

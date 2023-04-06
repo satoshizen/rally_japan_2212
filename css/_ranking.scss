@@ -2,12 +2,53 @@
 @use "mixin" as m;
 
 .ranking {
+
+  .cards {
+    padding: 0;
+    @include m.other {  // tabletのときのみ
+        display: grid;
+        gap: 10px;
+        grid-template-rows: auto auto auto ;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-areas:
+        "cCard1 cCard1 cCard1 cCard1 cCard1 cCard1 "
+        "cCard2 cCard2 cCard2 cCard3 cCard3 cCard3"
+        "cCard4 cCard4 cCard5 cCard5 cCard6 cCard6 ";
+        place-items: center;
+      }
+  
+    .card--1 {
+      grid-area:cCard1;
+      // width: 100%;
+      // max-width: 270px;
+    }
+    .card--2 {
+      grid-area:cCard2;
+      // width: 90%;
+    }
+    .card--3 {
+      grid-area:cCard3;
+      // width: 90%;
+    }
+    .card--4 {
+      grid-area:cCard4;
+      // width: 90%;
+    }
+    .card--5 {
+      grid-area:cCard5;
+      // width: 90%;
+    }
+    .card--6 {
+      grid-area:cCard6;
+      // width: 90%;
+    }
+    
+  }
+  
   .cards__item {
     display: grid;
     gap: 10px;
-    margin: 0;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     background-color: v.$black;
     grid-template-rows: auto 1fr ;
     grid-template-columns: auto auto auto 1fr ;
@@ -89,48 +130,6 @@
   margin-top: 0;
 }
 
-@include m.other {  // tabletのときのみ
-  .ranking {
-    .cards {
-      display: grid;
-      gap: 10px;
-      grid-template-rows: auto auto auto ;
-      grid-template-columns: auto auto auto auto auto auto;
-      grid-template-areas:
-      "cCard1 cCard1 cCard1 cCard1 cCard1 cCard1 "
-      "cCard2 cCard2 cCard2 cCard3 cCard3 cCard3"
-      "cCard4 cCard4 cCard5 cCard5 cCard6 cCard6 ";
-      place-items: center;
-
-    }
-
-    .card--1 {
-      grid-area:cCard1;
-      // width: 100%;
-      // max-width: 270px;
-    }
-    .card--2 {
-      grid-area:cCard2;
-      // width: 90%;
-    }
-    .card--3 {
-      grid-area:cCard3;
-      // width: 90%;
-    }
-    .card--4 {
-      grid-area:cCard4;
-      // width: 90%;
-    }
-    .card--5 {
-      grid-area:cCard5;
-      // width: 90%;
-    }
-    .card--6 {
-      grid-area:cCard6;
-      // width: 90%;
-    }
-  }
-}
 
 .ranking__btn {
   padding: 2rem;  

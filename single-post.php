@@ -10,6 +10,7 @@
           <div class="indiv-inner">
             <?php if (have_posts()) : ?>
               <?php while (have_posts()) : the_post(); ?>
+
                 <div class="indiv-category">
                   <ul>
                     <?php
@@ -34,9 +35,19 @@
           </div>
         </section>
         <div class="page-section">
-          <?php previous_post_link('&laquo; %link', '前の記事へ',true); ?>
-          <?php next_post_link('%link &raquo;', '次の記事へ',true); ?>
+          <!-- ボタン -->
+          <div class="nav-previous">
+            <?php if (get_previous_post()) : ?>
+              <?php previous_post_link('&laquo; %link', '前の記事へ'); ?>
+            <?php endif; ?>
+          </div>
+          <div class="nav-next">
+            <?php if (get_next_post()) : ?>
+              <?php next_post_link('%link &raquo;', '次の記事へ'); ?>
+            <?php endif; ?>
+          </div>
         </div>
+
       </div>
       <?php get_sidebar(); ?>
 
@@ -44,4 +55,4 @@
   </div>
 </main>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

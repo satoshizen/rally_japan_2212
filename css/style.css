@@ -525,6 +525,13 @@ main {
   margin: 0;
   padding: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .footer-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
 .footer-nav ul li {
   margin-top: 2rem;
 }
@@ -533,22 +540,17 @@ main {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 2rem 0;
-  margin: 0 auto;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
 }
 .footer-sns li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
   background-color: #727272;
   font-size: 2.4rem;
   transition-duration: 0.2s;
-}
-.footer-sns li:first-child {
-  margin-right: 2rem;
 }
 .footer-sns li.twitter:hover {
   background-color: #1d9bf0;
@@ -574,6 +576,8 @@ main {
 small {
   display: block;
   text-align: center;
+  margin-top: 2rem;
+  padding: 2rem auto;
 }
 
 @media screen and (min-width: 550px) {
@@ -688,6 +692,7 @@ small {
 @media screen and (min-width: 768px) {
   .kaisha {
     max-width: 550px;
+    border-collapse: collapse;
   }
 }
 
@@ -731,6 +736,29 @@ small {
     width: auto;
   }
 }
+.wpcf7 p label {
+  display: block;
+}
+@media screen and (min-width: 550px) {
+  .wpcf7 p label {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.s-contact {
+  margin-right: 2rem;
+}
+
+::placeholder {
+  color: #727272;
+}
+
+input,
+textarea {
+  margin-right: 0;
+}
+
 .contact__title {
   text-align: center;
 }
@@ -785,7 +813,7 @@ div.send-btn input {
 input, textarea, select {
   padding: 1rem;
   border: solid 1px #038C73;
-  border-radius: 2px;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 549px) {
@@ -930,12 +958,41 @@ input:focus, textarea:focus, select:focus {
   font-size: 1.2rem;
 }
 
+.ranking .cards {
+  padding: 0;
+}
+@media screen and (min-width: 550px) and (max-width: 767px) {
+  .ranking .cards {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-areas: "cCard1 cCard1 cCard1 cCard1 cCard1 cCard1 " "cCard2 cCard2 cCard2 cCard3 cCard3 cCard3" "cCard4 cCard4 cCard5 cCard5 cCard6 cCard6 ";
+    place-items: center;
+  }
+}
+.ranking .cards .card--1 {
+  grid-area: cCard1;
+}
+.ranking .cards .card--2 {
+  grid-area: cCard2;
+}
+.ranking .cards .card--3 {
+  grid-area: cCard3;
+}
+.ranking .cards .card--4 {
+  grid-area: cCard4;
+}
+.ranking .cards .card--5 {
+  grid-area: cCard5;
+}
+.ranking .cards .card--6 {
+  grid-area: cCard6;
+}
 .ranking .cards__item {
   display: grid;
   gap: 10px;
-  margin: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   background-color: #000;
   grid-template-rows: auto 1fr;
   grid-template-columns: auto auto auto 1fr;
@@ -1006,34 +1063,6 @@ input:focus, textarea:focus, select:focus {
   margin-top: 0;
 }
 
-@media screen and (min-width: 550px) and (max-width: 767px) {
-  .ranking .cards {
-    display: grid;
-    gap: 10px;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-template-areas: "cCard1 cCard1 cCard1 cCard1 cCard1 cCard1 " "cCard2 cCard2 cCard2 cCard3 cCard3 cCard3" "cCard4 cCard4 cCard5 cCard5 cCard6 cCard6 ";
-    place-items: center;
-  }
-  .ranking .card--1 {
-    grid-area: cCard1;
-  }
-  .ranking .card--2 {
-    grid-area: cCard2;
-  }
-  .ranking .card--3 {
-    grid-area: cCard3;
-  }
-  .ranking .card--4 {
-    grid-area: cCard4;
-  }
-  .ranking .card--5 {
-    grid-area: cCard5;
-  }
-  .ranking .card--6 {
-    grid-area: cCard6;
-  }
-}
 .ranking__btn {
   padding: 2rem;
   text-align: center;
@@ -1079,9 +1108,64 @@ input:focus, textarea:focus, select:focus {
 .page-section {
   display: flex;
   justify-content: space-between;
+}
+.page-section .nav-previous,
+.page-section .nav-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #D40F0F;
+}
+@media screen and (min-width: 550px) {
+  .page-section .nav-previous,
+  .page-section .nav-next {
+    height: 4rem;
+  }
+  .page-section .nav-previous a,
+  .page-section .nav-next a {
+    margin: 2rem;
+  }
+}
+
+.column_indiv {
+  background-color: #000;
+}
+.column_indiv .indiv-inner {
+  padding: 2rem;
+  color: #fff;
+}
+.column_indiv .indiv-inner a {
+  color: #1d9bf0;
+}
+.column_indiv .indiv-inner .indiv-title {
+  line-height: 1.25;
+  margin: 0;
+}
+.column_indiv .indiv-inner .indiv-image {
+  margin-top: 1rem;
+  max-height: 400px;
+  text-align: center;
+}
+.column_indiv .indiv-inner .indiv-category UL {
+  padding: 0;
+}
+.column_indiv .indiv-inner .indiv-category li {
+  display: inline;
   color: #fff;
   background-color: #D40F0F;
-  margin: 2rem;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+.column_indiv .indiv-inner .column__btn {
+  display: flex;
+  justify-content: space-around;
+}
+.column_indiv .indiv-inner .column__btn a {
+  color: #fff;
 }
 
 .pagenavi {
@@ -1130,6 +1214,42 @@ input:focus, textarea:focus, select:focus {
   border-left: solid 2px #000;
 }
 
+/* ボタン全体 */
+.flowbtn7 {
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: #fff !important;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+/* アイコンをど真ん中に*/
+.flowbtn7 i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* ボタンにマウスを乗せた時 */
+/* Instagramアイコン位置 */
+.insta_btn7 .fa-instagram {
+  font-size: 35px;
+}
+
+/* Instagram紫グラデ背景 */
+.insta_btn7:hover {
+  background: radial-gradient(at 30% bottom, #ffdb2c 5%, rgba(255, 105, 34, 0.65) 35%, rgba(255, 88, 96, 0) 70%), linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  overflow: hidden;
+}
+
+/* Instagram紫グラデ背景 */
 /* 文字コードの指定 */
 
 /*# sourceMappingURL=style.css.map */

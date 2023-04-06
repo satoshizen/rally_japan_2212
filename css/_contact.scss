@@ -1,7 +1,30 @@
 @use "variable" as v;
 @use "mixin" as m;
 
+.wpcf7 {
+  
+  p{
+    label {
+      display: block;
+      @include m.tablet {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+.s-contact {
+  margin-right: 2rem;
+}
 
+::placeholder {
+  color: v.$gray;
+}
+
+input,
+textarea {
+  margin-right: 0;
+} 
 
 .contact__title {
   text-align : center;
@@ -82,7 +105,7 @@ div {
 input, textarea, select {
   padding: 1rem;
   border:solid 1px v.$green02;
-  border-radius: 2px;
+  border-radius: 4px;
   box-sizing: border-box;
   @include m.sp {
     width: 100%;

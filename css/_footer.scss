@@ -16,6 +16,11 @@
     text-align: center;
     margin: 0;
     padding: 2rem;
+    @include m.pc {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    }
     li {
       margin-top: 2rem;
     }
@@ -26,27 +31,31 @@
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 2rem 0;
-  margin: 0 auto;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
   li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
     background-color: v.$gray;
     font-size: 2.4rem;
     transition-duration: 0.2s;
-    &:first-child {
-    margin-right: 2rem;
-    }
+    // &:first-child {
+    // margin-right: 2rem;
+    // }
     &.twitter:hover {
       background-color: v.$twitter;
     }
     &.fb:hover {
       background-color: v.$fb;
     }
+    // &.instagram:hover {
+    //   background-color: #fff;
+    // }
   }
   a {
     color: v.$white;
@@ -67,5 +76,7 @@
 small {
   display: block;
   text-align: center;
+  margin-top: 2rem;
+  padding: 2rem auto;
 }
 

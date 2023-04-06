@@ -1,0 +1,68 @@
+@use "variable" as v;
+@use "mixin" as m;
+
+/* ボタン全体 */
+.flowbtn7{
+  border-radius:50%;
+  position:relative;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  font-size:30px;
+  color:#fff!important;
+  text-decoration:none;
+  transition:.5s;			
+  }
+  /* アイコンをど真ん中に*/
+  .flowbtn7 i{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  }
+  // /* ulタグの内側余白を０にする */
+  // ul.snsbtniti{
+  // padding:0!important;
+  // }
+  // /* ボタン全体の位置 */
+  // .snsbtniti{
+  // display:flex;
+  // flex-flow:row wrap;
+  // justify-content:space-around;
+  // }
+  // /* ボタン同士の余白 */
+  // .snsbtniti li{
+  // flex:0 0 33%;
+  // text-align:center !important;
+  // }
+  /* ボタンにマウスを乗せた時 */
+  // .flowbtn7:hover{
+  // -webkit-transform:translateY(-5px);
+  // -ms-transform:translateY(-5px);
+  // transform:translateY(-5px);
+  // }
+  
+  /* Instagramアイコン位置 */
+  .insta_btn7 .fa-instagram{
+  font-size:35px;	
+  }
+  /* Instagram紫グラデ背景 */
+  .insta_btn7:hover{
+  background:radial-gradient(at 30% bottom, #ffdb2c 5%, rgba(255, 105, 34, 0.65) 35%, rgba(255, 88, 96, 0) 70%),
+  linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  overflow:hidden;	
+  }
+
+  // /* Instagramオレンジグラデ背景 */
+  // .insta_btn7:hover{
+  // background:-webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+
+  // background:radial-gradient(#ffdb2c 5%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+  // }
+
+  /* Instagram紫グラデ背景 */
+  // .insta_btn7:hover{
+    // background:-webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%),-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  // }

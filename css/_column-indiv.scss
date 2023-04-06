@@ -1,13 +1,14 @@
 @use "variable" as v;
 @use "mixin" as m;
 
-.news_indiv {
+.column_indiv {
   background-color: v.$black;
-
-
   .indiv-inner{
-    color: v.$white;
     padding: 2rem;
+    color: v.$white;
+    a{
+      color: v.$twitter;
+    }
     .indiv-title {
       line-height: 1.25;
       margin: 0;
@@ -16,9 +17,7 @@
       margin-top: 1rem;
       max-height: 400px;
       text-align: center;
-
     }
-
     .indiv-category {
       UL {
         padding: 0;
@@ -30,35 +29,14 @@
         padding: 3px 5px;
         border-radius: 3px;
         font-size: 1rem;
-          
       }
     }
-    // .indiv-text {
-    //   background-color: v.$black;
-    // }
-  }
-}
-
-.page-section {
-  display: flex;
-  justify-content: space-between;
-  .nav-previous,
-  .nav-next {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    color: v.$white;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    background-color: v.$red2;
-    
-    @include m.tablet {
-      height: 4rem;
-   
-    a {
-      margin: 2rem;
+    .column__btn {
+      display: flex;
+      justify-content: space-around;
+      a{
+        color: v.$white;
+      }
     }
   }
-}
 }

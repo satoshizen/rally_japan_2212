@@ -28,6 +28,7 @@
   padding: 2rem;
   @include m.pc {
     max-width: 550px;
+    border-collapse: collapse;
   }
 }
 
