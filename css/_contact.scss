@@ -6,15 +6,29 @@
   p{
     label {
       display: block;
+      align-items: center;
+      a{
+        color: v.$white;
+      }
+      a:hover {
+        color: red;
+      }
       @include m.tablet {
         display: flex;
-        justify-content: flex-end;
+      }
+      .wpcf7-form-control-wrap{
+        flex: 2;
+      }
+      .s-contact {
+        margin-right: 2rem;
+        flex:1;
+        text-align: right;
+      }
+      .t-contact {
+        align-self: normal;
       }
     }
   }
-}
-.s-contact {
-  margin-right: 2rem;
 }
 
 ::placeholder {
@@ -24,7 +38,12 @@
 input,
 textarea {
   margin-right: 0;
+  width: 100%;
 } 
+
+.doui {
+  width: 5%;
+}
 
 .contact__title {
   text-align : center;

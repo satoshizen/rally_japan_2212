@@ -738,16 +738,29 @@ small {
 }
 .wpcf7 p label {
   display: block;
+  align-items: center;
+}
+.wpcf7 p label a {
+  color: #fff;
+}
+.wpcf7 p label a:hover {
+  color: red;
 }
 @media screen and (min-width: 550px) {
   .wpcf7 p label {
     display: flex;
-    justify-content: flex-end;
   }
 }
-
-.s-contact {
+.wpcf7 p label .wpcf7-form-control-wrap {
+  flex: 2;
+}
+.wpcf7 p label .s-contact {
   margin-right: 2rem;
+  flex: 1;
+  text-align: right;
+}
+.wpcf7 p label .t-contact {
+  align-self: normal;
 }
 
 ::placeholder {
@@ -757,6 +770,11 @@ small {
 input,
 textarea {
   margin-right: 0;
+  width: 100%;
+}
+
+.doui {
+  width: 5%;
 }
 
 .contact__title {
@@ -1250,6 +1268,25 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Instagram紫グラデ背景 */
+/* 送信ボタン */
+.submit-btn {
+  /* buttonタグのリセットCSS */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  color: #fff;
+  padding: 8px 24px;
+  background-color: #3abec1;
+  cursor: pointer; /* ポインターカーソルを表示 */
+}
+
+.submit-btn[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed; /* クリック不可のカーソルを表示 */
+}
+
 /* 文字コードの指定 */
 
 /*# sourceMappingURL=style.css.map */

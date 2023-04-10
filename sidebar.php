@@ -34,7 +34,7 @@
         <?php
         $wpp_args = array(
           'posts_per_page' => '6',
-          // 'post_type' => 'post',
+          'post_type' => array('post', 'column'),
           'post__in' => $wpp_query_ids, // 先ほどのランキング配列を入れる
           'orderby' => 'post__in' // 配列の順番で表示する
         );

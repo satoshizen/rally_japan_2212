@@ -2,13 +2,16 @@
         <footer class="footer">
             <!-- ここにフッターが入ります -->
             <div class="footer-contents">
-              <nav class="footer-nav"> 
-                <ul>
-                  <li><a href="privacy.html">プライバシーポリシー</a></li>
-                  <li><a href="company.html">運営会社</a></li>
-                  <li><a href="contact.html">お問い合わせ</a></li>
-                </ul>
-              </nav>
+              <div class="foot-list">
+
+                <?php wp_nav_menu(array(
+                  'container' => 'nav',
+                  'container_class' => 'footer-nav',
+                  'items_wrap' => '<ul id="%1$s" class="%2$s pc-nav-list">%3$s</ul>',
+                  'menu' => 'footer-navigation'
+                )); ?>
+              </div>
+
             </div>
             <div class="footer-body">
               <ul class="footer-sns">
