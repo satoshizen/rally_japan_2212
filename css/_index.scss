@@ -66,13 +66,13 @@ main {
 .cards {
   width: 100%;
   max-width: 980px;
-  margin-top: 2rem;
-  // margin-bottom: 4rem;
+  @include m.other {
+    margin-top: 2rem;
+  }
 
 }
 
 .news {
-  
   .card {
     display: grid;
     gap: 10px;

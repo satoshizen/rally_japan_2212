@@ -1,13 +1,18 @@
 @use "variable" as v;
 @use "mixin" as m;
 
+.title-en {
+  font-size: 24px;
+}
+.japanese {
+  display: block;
+  font-size: 16px;
+}
 .arrivals {
-  .cards__item {
+  .cards__item{
     display: grid;
     gap: 10px;
-    margin: 0;
     margin-top: 2rem;
-    margin-bottom: 2rem;
     background-color: v.$black;
     grid-template-rows: auto 1fr;
     grid-template-columns: auto auto auto 1fr;
@@ -24,7 +29,6 @@
       "cYear  cCat cCat"
       "cTitle cTitle cTitle";
     }
-
 
     .card__title {
       grid-area: cTitle;
@@ -73,8 +77,11 @@
 }
 
 .arrivals__cards {
+  display: flex;
+  flex-direction: column;
   @include m.other {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
@@ -83,10 +90,10 @@
       width: 45%;
     }
   }
-
 }
 .arrivals__title {
   text-align: center;
+  margin: 0;
 }
 .arrivals__btn {
   padding: 2rem;  
@@ -104,4 +111,79 @@
     border-radius: 20px;
     text-transform: uppercase;
   }
+}
+.newsarrivals {
+  .arrivals__cards {
+    .cards__item {
+      background-color: v.$black;
+      @include m.tablet {
+        width: 45%;
+      }
+    }
+  }
+  .card {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+      "cYear cCat cCat  "
+      "cImg  cTitle cTitle";
+    @include m.tablet {
+      grid-template-rows: auto auto 1fr;
+      grid-template-columns: auto 1fr;
+      grid-template-areas: 
+      "cImg   cImg "
+      "cYear  cCat  "
+      "cTitle cTitle";
+      }
+    
+    .card__title {
+      grid-area: cTitle;
+      color: v.$white;
+      margin: 0;
+      line-height: 1.2;
+      font-size: 1.4rem;
+      padding: .5rem;
+    }
+
+    .card__year {
+      grid-area: cYear;
+      color: v.$white;
+      font-size: 1.2rem;
+      margin: 4px;
+    }
+
+    .card__category {
+      grid-area: cCat;
+      ul{
+        margin: 0;
+        padding: 0;
+
+      }
+      li {
+        display: inline-block;
+        color: v.$white;
+        background-color: v.$red2;
+        // padding: 3px 5px;
+        // border-radius: 3px;
+        // font-size: 1.2rem;
+      }
+    }
+
+    .card_image{
+      grid-area: cImg;
+      width: 100px;
+      img{
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 16/9 ;
+      width: 100%
+      }
+      @include m.tablet {
+        width: 100%;
+      }
+    }
+  }
+
 }

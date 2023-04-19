@@ -41,6 +41,49 @@ textarea {
   width: 100%;
 } 
 
+.kojin {
+  display: none;
+  @include m.tablet {
+    flex: 1;
+    display: block;
+  }
+}
+.check {
+  flex: 2;
+  a{
+  color: v.$red1;
+  }
+}
+.wpcf7-list-item-label {
+  display: block;
+}
+
+.check {
+  display: block;
+  .wpcf7-form-control-wrap {
+    display: block;
+    .wpcf7-form-control {
+      display: block;
+      .wpcf7-list-item {
+        display: block;
+        label {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  input {
+    width: 30px;
+  }
+}
+
+.checkb{
+  p{
+    display: flex;
+  }
+}
 .doui {
   width: 5%;
 }

@@ -21,8 +21,6 @@
               );
               wp_list_categories($args);
               ?>
-              <!-- </ul> -->
-              <!-- カード群 -->
               <div class="column__cards cards">
                 <!-- カード -->
                 <?php if (have_posts()) : ?>

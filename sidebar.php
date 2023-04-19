@@ -8,9 +8,6 @@
         アクセスランキング
       </h2>
       <?php
-      // $cat = get_the_category();
-      // $cat = $cat[0];
-      // $wpp_query_idsにランキング配列を格納
       if (function_exists('wpp_get_mostpopular')) {
         $wpp_option = array( // ランキングの設定
           'range' => 'weekly', //集計期間。 daily, weekly, monthly, all のいずれかを指定
@@ -33,7 +30,7 @@
         <!-- カード -->
         <?php
         $wpp_args = array(
-          'posts_per_page' => '6',
+          'posts_per_page' => '10',
           'post_type' => array('post', 'column'),
           'post__in' => $wpp_query_ids, // 先ほどのランキング配列を入れる
           'orderby' => 'post__in' // 配列の順番で表示する
@@ -127,7 +124,7 @@
           <?php endwhile; ?>
           <div class="arrivals__btn">
             <!-- ボタン -->
-            <a href="" class="btn">もっと見る</a>
+            <a href="<?php echo home_url('/news-arrivals') ?>" class="btn">もっと見る</a>
           </div>
         <?php else : ?>
           <!-- // 記事がない場合 -->
