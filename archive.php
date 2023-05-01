@@ -10,17 +10,19 @@
           <div class="column__inner">
 
             <!-- タイトル -->
-            <h2 class="column__title section-title" data-en="column">
-              最新コラム
+            <h2 class="column__title section-title" data-en="<?php echo get_the_archive_title(); ?>">
+              <?php echo get_the_archive_title(); ?>
             </h2>
+
             <!-- カテゴリー群 -->
-            <div class="column-category">
-              <ul class="category-title">
-                <?php $args = array(
-                  'title_li' => ''
-                );
-                wp_list_categories($args);
-                ?></ul>
+            <div class="news-category">
+              <!-- <ul class="category-title"> -->
+              <?php $args = array(
+                'title_li' => ''
+              );
+              wp_list_categories($args);
+              ?>
+            </div>
               <div class="column__cards cards">
                 <!-- カード -->
                 <?php if (have_posts()) : ?>
@@ -30,15 +32,15 @@
                         <?php the_title(); ?></h3>
                       <span class="card__year"><?php the_time('Y年m月d日'); ?></span>
                       <div class="card__category">
-                      <ul>   
-                        <?php     
+                        <ul>
+                          <?php
                           // カテゴリー名の繰り返し表示
                           $categories = get_the_category();
-                          foreach( $categories as $category ):
-                        ?>
-                        <li><?php echo $category->name; ?></li>
-                        <?php endforeach;?>
-                      </ul>
+                          foreach ($categories as $category) :
+                          ?>
+                            <li><?php echo $category->name; ?></li>
+                          <?php endforeach; ?>
+                        </ul>
                       </div>
                       <div class="card_image">
                         <?php the_post_thumbnail('array(256,160)'); ?>
@@ -55,7 +57,7 @@
                 <!-- ボタン -->
                 <?php wp_pagenavi(); ?>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
         </section>
       </div>

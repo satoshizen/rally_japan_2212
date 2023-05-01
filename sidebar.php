@@ -43,8 +43,6 @@
           while ($wpp_query->have_posts()) : $wpp_query->the_post();
             $rank += 1;
           ?>
-            <?php $cat = get_the_category(); ?>
-            <?php $cat = $cat[0]; ?>
 
             <!-- ランキングに入れたい内容を入れる -->
             <a href="<?php the_permalink(); ?>" class="cards__item card--<?php echo $rank; ?>">
@@ -97,7 +95,7 @@
           'order'     => 'DESC', //記事の順番変更
         );
         $post_query = new WP_Query($args);
-          if ($post_query->have_posts()) :
+        if ($post_query->have_posts()) :
         ?>
           <?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
 

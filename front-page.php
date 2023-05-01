@@ -76,6 +76,7 @@
                     </h2>
                     <!-- カード群 -->
                     <div class="news__cards cards">
+                      <!-- <div class="news-container"> -->
                       <!-- カード -->
                       <?php $args = array(
                         'post_type' => 'post', //投稿タイプを指定
@@ -113,6 +114,7 @@
                           <!-- // 記事がない場合 -->
                           <p>記事が見つかりません。</p>
                           <?php endif; ?>
+                      <!-- </div> -->
                     </div>
                     <!-- ボタンの囲い -->
                     <div class="news__btn">
