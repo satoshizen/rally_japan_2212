@@ -1,12 +1,6 @@
 @use "variable" as v;
 @use "mixin" as m;
 
-// .container {
-//   @include m.tablet {
-//     margin-top: 19rem;
-//   }
-// }
-
 .news-category {
   @include m.tablet {
     margin-left: 2rem;
@@ -19,60 +13,66 @@
     border-radius: 1rem;
   }
 }
-  .card__category {
-    grid-area: cCat;
-    padding-left: 1rem;
-    li {
-      display: inline;
-      color: v.$white;
-      background-color: v.$red2;
-      padding: 3px 5px;
-      border-radius: 3px;
-      font-size: 1rem;
+
+
+.news_indiv {
+  background-color: v.$black;
+
+
+  .indiv-inner{
+    color: v.$white;
+    padding: 2rem;
+    .indiv-title {
+      line-height: 1.25;
+      margin: 0;
+    }
+    .indiv-image {
+      margin-top: 1rem;
+      max-height: 400px;
+      text-align: center;
+
+    }
+
+    .indiv-category {
+      UL {
+        padding: 0;
+      }
+      li {
+        display: inline;
+        color: v.$white;
+        background-color: v.$red2;
+        padding: 3px 5px;
+        border-radius: 3px;
+        font-size: 1rem;
+          
+      }
+    }
+    // .indiv-text {
+    //   background-color: v.$black;
+    // }
+  }
+}
+
+.page-section {
+  display: flex;
+  justify-content: space-between;
+  .nav-previous,
+  .nav-next {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    color: v.$white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: v.$red2;
+    
+    @include m.tablet {
+      height: 4rem;
+  
+    a {
+      margin: 2rem;
     }
   }
-
-
-// .news_indiv {
-//   .card {
-//     .card__title {
-//       grid-area: cTitle;
-//       color: v.$white;
-//       margin: 0;
-//       padding: 2rem;
-//       line-height: 1.2;
-//       font-size: 1.6rem;
-//     }
-
-//     .card__year {
-//       grid-area: cYear;
-//       color: v.$white;
-//       font-size: 1rem;
-//       padding-left: 1rem;
-//     }
-
-//     .card__category {
-//       grid-area: cCat;
-//       padding-left: 1rem;
-//       span {
-//         color: v.$white;
-//         background-color: v.$red2;
-//         padding: 3px 5px;
-//         border-radius: 3px;
-//         font-size: 1rem;
-//       }
-//     }
-
-//     p {
-//       color: v.$white;
-//       padding: 2rem;
-//       font-size: 1.2rem;
-//     }
-//   }
-//   .cards__item {
-//     margin-top: 2rem;
-//     background-color: v.$black;
-//     width: 100%;
-
-//   }
-//  }
+}
+}

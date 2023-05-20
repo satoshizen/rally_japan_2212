@@ -67,20 +67,19 @@
             <div class="container">
               <div class="main-container">
                 <!-- NEWSセクション -->
-                <section class="news">
+                <section class="posts-list news">
                   <!-- インナー -->
-                  <div class="news__inner">
+                  <div class="posts-list__inner">
                     <!-- タイトル -->
                     <h2 class="news__title section-title" data-en="news">
                       最新ニュース
                     </h2>
                     <!-- カード群 -->
-                    <div class="news__cards cards">
-                      <!-- <div class="news-container"> -->
+                    <di v class="posts-list__cards news__cards cards">
                       <!-- カード -->
                       <?php $args = array(
                         'post_type' => 'post', //投稿タイプを指定
-                        'category_name' => 'news', //カテゴリースラッグ指定
+                        // 'category_name' => 'news', //カテゴリースラッグ指定
                         'post_per_page' => 6, //6件表示
                         'order'     => 'DESC', //記事の順番変更
                       );
@@ -95,14 +94,14 @@
                             <span class="card__year">
                               <?php the_time('Y年m月d日'); ?></span>
                             <div class="card__category">
-                              <ul>   
-                                <?php     
-                                  // カテゴリー名の繰り返し表示
-                                  $categories = get_the_category();
-                                  foreach( $categories as $category ):
+                              <ul>
+                                <?php
+                                // カテゴリー名の繰り返し表示
+                                $categories = get_the_category();
+                                foreach ($categories as $category) :
                                 ?>
-                                <li><?php echo $category->name; ?></li>
-                                <?php endforeach;?>
+                                  <li><?php echo $category->name; ?></li>
+                                <?php endforeach; ?>
                               </ul>
                             </div>
                             <div class="card_image">
@@ -110,29 +109,28 @@
                             </div>
                           </a>
                         <?php endwhile; ?>
-                        <?php else : ?>
-                          <!-- // 記事がない場合 -->
-                          <p>記事が見つかりません。</p>
-                          <?php endif; ?>
-                      <!-- </div> -->
-                    </div>
+                      <?php else : ?>
+                        <!-- // 記事がない場合 -->
+                        <p>記事が見つかりません。</p>
+                      <?php endif; ?>
+                    </di>
                     <!-- ボタンの囲い -->
-                    <div class="news__btn">
+                    <div class="more__btn">
                       <!-- ボタン -->
-                      <a href="<?php echo home_url('category/news/') ?>" class="btn">もっと見る</a>
+                      <a href="<?php echo home_url('/news/') ?>" class="btn">もっと見る</a>
                     </div>
                   </div>
                 </section>
                 <!-- COLUMNセクション -->
-                <section class="column">
+                <section class="posts-list column">
                   <!-- インナー -->
-                  <div class="column__inner">
+                  <div class="posts-list__inner">
                     <!-- タイトル -->
                     <h2 class="column__title section-title" data-en="column">
                       最新コラム
                     </h2>
                     <!-- カード群 -->
-                    <div class="column__cards cards">
+                    <div class="posts-list__cards column__cards cards">
                       <!-- カード -->
                       <?php
                       $args = array(
@@ -151,32 +149,32 @@
                             <span class="card__year">
                               <?php the_time('Y年m月d日'); ?></span>
                             <div class="card__category">
-                              <ul>   
-                                  <?php     
-                                    // カテゴリー名の繰り返し表示
-                                    $categories = get_the_category();
-                                    foreach( $categories as $category ):
-                                  ?>
+                              <ul>
+                                <?php
+                                // カテゴリー名の繰り返し表示
+                                $categories = get_the_category();
+                                foreach ($categories as $category) :
+                                ?>
                                   <li><?php echo $category->name; ?></li>
-                                  <?php endforeach;?>
-                                </ul>
+                                <?php endforeach; ?>
+                              </ul>
                             </div>
                             <div class="card_image">
                               <?php the_post_thumbnail('array(256,160)'); ?>
                             </div>
                           </a>
                         <?php endwhile; ?>
-                        <?php else : ?>
-                          <!-- // 記事がない場合 -->
-                          <p>記事が見つかりません。</p>
-                          <?php endif; ?>
-                        </a>
-                      </div>
-                        <!-- ボタンの囲い -->
-                        <div class="column__btn">
-                          <!-- ボタン -->
-                          <a href="<?php echo home_url('/column') ?>" class="btn">もっと見る</a>
-                        </div>
+                      <?php else : ?>
+                        <!-- // 記事がない場合 -->
+                        <p>記事が見つかりません。</p>
+                      <?php endif; ?>
+                      </a>
+                    </div>
+                    <!-- ボタンの囲い -->
+                    <div class="more__btn">
+                      <!-- ボタン -->
+                      <a href="<?php echo home_url('/column') ?>" class="btn">もっと見る</a>
+                    </div>
                   </div>
                 </section>
               </div>

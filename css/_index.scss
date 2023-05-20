@@ -32,16 +32,6 @@ main {
     width: 30%;
     margin-top: 2rem;
     }
-  
-}
-
-.section-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: v.$white;
-  background-color: v.$red2;
-  padding: 1rem 0;
-  
 }
 
 .section-title::before {
@@ -57,7 +47,13 @@ main {
   margin: 0 auto;
 }
 
-.news__title {
+.news__title, .section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: v.$white;
+  background-color: v.$red2;
+  padding: 1rem 0;
+
   margin-top: 0;
   margin-bottom: 2rem;
   text-align: center;
@@ -66,18 +62,18 @@ main {
 .cards {
   width: 100%;
   max-width: 980px;
+  padding: 0;
   @include m.other {
     margin-top: 2rem;
   }
-
 }
 
-.news {
+.posts-list, .news {
   .card {
     display: grid;
     gap: 10px;
     grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto 1fr;
     grid-template-areas: 
       "cYear cCat cCat  "
       "cImg  cTitle cTitle";
@@ -89,14 +85,24 @@ main {
       "cYear  cCat  "
       "cTitle cTitle";
       }
+    &:hover {
+      @include m.pc {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
     
     .card__title {
       grid-area: cTitle;
       color: v.$white;
       margin: 0;
+      padding: 0;
       line-height: 1.2;
       font-size: 1.4rem;
-      padding: .5rem;
+      @include m.other {
+        padding: 5px;
+      }
     }
 
     .card__year {
@@ -111,15 +117,15 @@ main {
       ul{
         margin: 0;
         padding: 0;
-
       }
       li {
         display: inline-block;
         color: v.$white;
         background-color: v.$red2;
-        // padding: 3px 5px;
-        // border-radius: 3px;
-        // font-size: 1.2rem;
+        padding: 1px 5px;
+        border-radius: 5px;
+        font-size: 1rem;
+  
       }
     }
 
@@ -131,25 +137,18 @@ main {
       height: auto;
       object-fit: cover;
       aspect-ratio: 16/9 ;
-      width: 100%
+      width: 100%;
+      transition: .3s;
       }
       @include m.tablet {
         width: 100%;
         overflow: hidden;
       }
-      
-    }
-  }
-  @include m.pc {
-    .card:hover 
-    img {
-      transform: scale(1.05);
-      transition: .3s;
     }
   }
 
 }
-  .news__cards {
+  .posts-list__cards {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -171,8 +170,15 @@ main {
       }
     }
   }
+  .posts-list__cards:after {
+    content:"";
+    display: block;
+    width: 45%;
+    height: 0;
+  }
 
-.news__btn {
+
+.more__btn {
   text-align: center;
   padding: 2rem;
   margin-top: 2rem;
@@ -189,22 +195,8 @@ main {
 }
 
 
-.column {
-
-  .column__inner {
-    background-color: v.$dark-gray;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .column__title {
-    margin-top: 0;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  .category-title{
-    padding: 0;
-  }
   .column-category {
+    margin: 0 4px;
     @include m.tablet {
       margin-left: 2rem;
     }
@@ -216,147 +208,38 @@ main {
       border-radius: 1rem;
     }
   }
-  .column__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
 
-    @include m.tablet {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: v.$black;
-      padding: 2rem 0;
-      // gap: 2rem;
-
-    }
-    .cards__item {
-      background-color: v.$black;
-      @include m.tablet {
-        width: 45%;
-        filter: drop-shadow(0 0 5px rgba(255,255,255,.4));
-      }
-    }
-  }
-
-  .column__cards:after {
-    content:"";
-    display: block;
-    width: 45%;
-    height: 0;
-  }
-
-  .card {
-    display: grid;
-    gap: 10px;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto 1fr;
-    grid-template-areas: 
-      "cYear cCat cCat  "
-      "cImg  cTitle cTitle";
-      @include m.tablet {
-        grid-template-rows: auto auto;
-        grid-template-columns: auto 1fr;
-        grid-template-areas: 
-        "cImg   cImg "
-        "cYear  cCat  "
-        "cTitle cTitle";
-        // place-items: center;
-        }
-    .card__title {
-      grid-area: cTitle;
-      color: v.$white;
-      margin: 0;
-      line-height: 1.2;
-      font-size: 1.4rem;
-      padding: .5rem;
-    }
-
-    .card__year {
-      grid-area: cYear;
-      color: v.$white;
-      font-size: 1.2rem;
-      margin: 4px;
-    }
-
-    .card__category {
-      grid-area: cCat;
-      margin: 0;
-      padding: 0;
-      color: v.$white;
-      ul {
-        margin: 0;
-        padding: 0;
-      }
-      li {
-        background-color: v.$red2;
-        
-        }
-    }
-
-    .card_image {
-      grid-area: cImg;
-      width: 100px;
-      @include m.tablet {
-        width: 100%;
-      }
-      img{
-        height: auto;
-        width: 100%;
-        object-fit: cover;
-        aspect-ratio: 16/9 ;
-      }
-    }
-  }
-  @include m.pc {
-    .card:hover 
-    img {
-      transform: scale(1.05);
-      transition: .3s;
-    }
-  }
-
-
-  .column__btn {
-    text-align: center;
-    padding: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    .btn {
-      text-decoration: none;
-      color: v.$white;
-      padding: 10px 20px;
-      min-width: 300px;
-      background-color: v.$black;
-      border-radius: 20px;
-      text-transform: uppercase;
-    }
-  }
-}
 .page{
-  background-color: v.$black;
 
-.nonpage {
-  color: white;
-  h2 {
-    display: block;
+  .nonpage {
+    color: white;
     text-align: center;
-    color: v.$red1;
-  }
-  p {
-    padding: 0 2rem;
-  }
-  .modoru {
-    margin-top: 2rem;
-    text-align: center;
-    a{
-      display: inline;
-      font-weight: bold;
-      color: v.$black;
+    h2 {
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+      color: white;
       background-color: v.$red2;
-      padding: 5px;
     }
-  }
+    p {
+      display: block;
+      text-align: left;
+      padding: 0 2rem;
+      background-color: black;
+      padding: 2rem;
+    }
+    .modoru {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      text-align: center;
+      a{
+        display: inline;
+        font-weight: bold;
+        color: v.$black;
+        background-color: v.$red2;
+        padding: 5px;
+      }
+    }
 
-}
+  }
 }

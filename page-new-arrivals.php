@@ -1,18 +1,11 @@
-<?php
-/* 
-Template Name: newsarrivals
-*/
-?>
-
 <?php get_header(); ?>
 <!-- メイン -->
 <main>
   <div class="wrapper">
     <div class="container">
       <div class="main-container">
-
         <!-- NEWSセクション -->
-        <section class="newsarrivals">
+        <section class="posts-list newarrivals">
           <!-- インナー -->
           <div class="news__inner">
             <!-- タイトル -->
@@ -23,15 +16,15 @@ Template Name: newsarrivals
             <!-- カテゴリー群 -->
             <div class="news-category">
               <!-- <ul class="category-title"> -->
-              <?php $args = array(
-                'title_li' => ''
-              );
-              wp_list_categories($args);
-              ?>
+              <!-- <?php $args = array(
+                      'title_li' => ''
+                    );
+                    wp_list_categories($args);
+                    ?> -->
               <!-- </ul> -->
             </div>
             <!-- カード -->
-            <div class="news__cards cards">
+            <div class="posts-list__cards arrivals__cards cards">
               <!-- カード -->
               <?php
               $args = array(

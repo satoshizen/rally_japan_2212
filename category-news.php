@@ -6,9 +6,9 @@
       <div class="main-container">
 
         <!-- NEWSセクション -->
-        <section class="news">
+        <section class="posts-list news">
           <!-- インナー -->
-          <div class="news__inner">
+          <div class="posts-list_inner">
             <!-- タイトル -->
             <h2 class="news__title section-title" data-en="news">
               最新ニュース
@@ -24,7 +24,7 @@
               <!-- </ul> -->
             </div>
             <!-- カード群 -->
-            <div class="news__cards cards">
+            <div class="posts-list__cards news__cards cards">
               <!-- カード -->
               <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post();  ?>
@@ -34,7 +34,6 @@
                     <span class="card__year">
                       <?php the_time('Y年m月d日'); ?>
                     </span>
-
                     <span class="card__category">
                       <ul>   
                         <?php     

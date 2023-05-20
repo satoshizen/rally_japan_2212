@@ -45,6 +45,7 @@
           ?>
 
             <!-- ランキングに入れたい内容を入れる -->
+            
             <a href="<?php the_permalink(); ?>" class="cards__item card--<?php echo $rank; ?>">
               <h3 class="card__title">
                 <?php the_title(); ?></h3>
@@ -86,7 +87,7 @@
         新着情報
       </h2>
       <!-- カード群 -->
-      <div class="arrivals__cards cards">
+      <ol class="arrivals__cards cards">
         <!-- カード -->
         <?php $args = array(
           'post_type' => array('column', 'post'), //投稿タイプを指定
@@ -96,9 +97,10 @@
         );
         $post_query = new WP_Query($args);
         if ($post_query->have_posts()) :
-        ?>
+          ?>
           <?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
-
+          
+          <li>
             <a href="<?php the_permalink(); ?>" class="cards__item card">
               <h3 class="card__title">
                 <?php the_title(); ?></h3>
@@ -119,17 +121,18 @@
                 <?php the_post_thumbnail('array(256,160)'); ?>
               </div>
             </a>
+          </li>
           <?php endwhile; ?>
-          <div class="arrivals__btn">
-            <!-- ボタン -->
-            <a href="<?php echo home_url('/news-arrivals') ?>" class="btn">もっと見る</a>
+        </ol>
+        <!-- ボタン -->
+        <div class="arrivals__btn">
+            <a href="<?php echo home_url('/new-arrivals') ?>" class="btn">もっと見る</a>
           </div>
         <?php else : ?>
           <!-- // 記事がない場合 -->
           <p>記事が見つかりません。</p>
         <?php endif; ?>
         <!-- ボタンの囲い -->
-      </div>
   </section>
 
 </div>

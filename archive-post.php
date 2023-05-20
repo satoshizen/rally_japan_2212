@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 <!-- メイン -->
 <main>
@@ -10,10 +11,9 @@
           <div class="posts-list__inner">
 
             <!-- タイトル -->
-            <h2 class="column__title section-title" data-en="<?php echo get_the_archive_title(); ?>">
-              <!-- <?php echo get_the_archive_title(); ?> -->
+            <h2 class="column__title section-title" data-en="news">
+              最新ニュース
             </h2>
-
             <!-- カテゴリー群 -->
             <div class="news-category">
               <!-- <ul class="category-title"> -->

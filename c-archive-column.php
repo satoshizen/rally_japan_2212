@@ -5,25 +5,23 @@
     <div class="container">
       <div class="main-container">
         <!-- COLUMNセクション -->
-        <section class="posts-list column">
+        <section class="column">
           <!-- インナー -->
-          <div class="posts-list__inner">
+          <div class="column__inner">
 
             <!-- タイトル -->
-            <h2 class="column__title section-title" data-en="<?php echo get_the_archive_title(); ?>">
-              <!-- <?php echo get_the_archive_title(); ?> -->
+            <h2 class="column__title section-title" data-en="column">
+              コラム
             </h2>
-
             <!-- カテゴリー群 -->
-            <div class="news-category">
-              <!-- <ul class="category-title"> -->
-              <?php $args = array(
-                'title_li' => ''
-              );
-              wp_list_categories($args);
-              ?>
-            </div>
-              <div class="posts-list__cards column__cards cards">
+            <div class="column-category">
+              <ul class="category-title">
+                <?php $args = array(
+                  'title_li' => ''
+                );
+                wp_list_categories($args);
+                ?></ul>
+              <div class="column__cards cards">
                 <!-- カード -->
                 <?php if (have_posts()) : ?>
                   <?php while (have_posts()) : the_post();  ?>
@@ -32,15 +30,15 @@
                         <?php the_title(); ?></h3>
                       <span class="card__year"><?php the_time('Y年m月d日'); ?></span>
                       <div class="card__category">
-                        <ul>
-                          <?php
+                      <ul>   
+                        <?php     
                           // カテゴリー名の繰り返し表示
                           $categories = get_the_category();
-                          foreach ($categories as $category) :
-                          ?>
-                            <li><?php echo $category->name; ?></li>
-                          <?php endforeach; ?>
-                        </ul>
+                          foreach( $categories as $category ):
+                        ?>
+                        <li><?php echo $category->name; ?></li>
+                        <?php endforeach;?>
+                      </ul>
                       </div>
                       <div class="card_image">
                         <?php the_post_thumbnail('array(256,160)'); ?>
@@ -57,7 +55,7 @@
                 <!-- ボタン -->
                 <?php wp_pagenavi(); ?>
               </div>
-            <!-- </div> -->
+            </div>
           </div>
         </section>
       </div>
