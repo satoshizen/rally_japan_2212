@@ -45,8 +45,8 @@
           ?>
 
             <!-- ランキングに入れたい内容を入れる -->
-            
-            <a href="<?php the_permalink(); ?>" class="cards__item card--<?php echo $rank; ?>">
+            <li class="card--<?php echo $rank; ?>">
+            <a href="<?php the_permalink(); ?>" class="cards__item ">
               <h3 class="card__title">
                 <?php the_title(); ?></h3>
               <div class="card__num">
@@ -69,6 +69,7 @@
                 <?php the_post_thumbnail('array(256,160)'); ?>
               </div>
             </a>
+            </li>
           <?php endwhile; ?>
         <?php else : ?>
           <!-- // 記事がない場合 -->
@@ -87,7 +88,7 @@
         新着情報
       </h2>
       <!-- カード群 -->
-      <ol class="arrivals__cards cards">
+      <ul class="arrivals__cards cards">
         <!-- カード -->
         <?php $args = array(
           'post_type' => array('column', 'post'), //投稿タイプを指定
@@ -100,7 +101,7 @@
           ?>
           <?php while ($post_query->have_posts()) : $post_query->the_post(); ?>
           
-          <li>
+          <li class="card_container">
             <a href="<?php the_permalink(); ?>" class="cards__item card">
               <h3 class="card__title">
                 <?php the_title(); ?></h3>
@@ -123,7 +124,7 @@
             </a>
           </li>
           <?php endwhile; ?>
-        </ol>
+        </ul>
         <!-- ボタン -->
         <div class="arrivals__btn">
             <a href="<?php echo home_url('/new-arrivals') ?>" class="btn">もっと見る</a>

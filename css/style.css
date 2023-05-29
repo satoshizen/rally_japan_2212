@@ -26,7 +26,7 @@ img {
 
 main {
   max-width: 960px;
-  margin: 11rem auto;
+  margin: 11rem auto 6rem;
 }
 
 .wrapper {
@@ -43,21 +43,25 @@ main {
   }
 }
 
+.container {
+  margin-top: 2rem;
+}
 @media screen and (min-width: 768px) {
   .container {
     display: flex;
     flex-direction: row-reverse;
   }
-  .main-container {
+  .container .main-container {
     width: 70%;
     margin-top: 2rem;
     margin-left: 2rem;
   }
-  .sub-container {
+  .container .sub-container {
     width: 30%;
     margin-top: 2rem;
   }
 }
+
 .section-title::before {
   content: attr(data-en);
   display: block;
@@ -86,6 +90,7 @@ main {
   width: 100%;
   max-width: 980px;
   padding: 0;
+  margin: 0;
 }
 @media screen and (min-width: 550px) and (max-width: 767px) {
   .cards {
@@ -198,8 +203,7 @@ main {
 
 .more__btn {
   text-align: center;
-  padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 4rem;
 }
 .more__btn .btn {
@@ -213,19 +217,18 @@ main {
 }
 
 .column-category {
-  margin: 0 4px;
-}
-@media screen and (min-width: 550px) {
-  .column-category {
-    margin-left: 2rem;
-  }
+  margin: 1rem;
 }
 .column-category li {
   display: inline-block;
-  padding: 0 8px;
-  margin-bottom: 0.5rem;
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1.2rem;
   background-color: #FF0000;
   border-radius: 1rem;
+}
+.column-category li a {
+  padding: 0.5rem;
 }
 
 .page .nonpage {
@@ -269,7 +272,7 @@ main {
   left: -120%;
   width: 100%;
   height: 100vh; /*ナビの高さ*/
-  background: #DBE8E7;
+  background: #727272;
   /*動き*/
   transition: all 0.6s;
 }
@@ -313,7 +316,7 @@ main {
 }
 
 #g-nav li a {
-  color: #343;
+  color: #fff;
   text-decoration: none;
   padding: 10px;
   display: block;
@@ -521,15 +524,35 @@ main {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background-color: #727272;
   font-size: 2.4rem;
-  transition-duration: 0.2s;
 }
-.footer-sns li.twitter:hover {
+.footer-sns li.twitter {
   background-color: #1d9bf0;
 }
-.footer-sns li.fb:hover {
+.footer-sns li.fb {
   background-color: #1877F2;
+}
+.footer-sns li.instagram {
+  background: radial-gradient(at 30% bottom, #ffdb2c 5%, rgba(255, 105, 34, 0.65) 35%, rgba(255, 88, 96, 0) 70%), linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .footer-sns li.twitter, .footer-sns li.fb {
+    background-color: #727272;
+    transition: 0.5s;
+  }
+  .footer-sns li.twitter:hover {
+    background-color: #1d9bf0;
+  }
+  .footer-sns li.fb:hover {
+    background-color: #1877F2;
+  }
+  .footer-sns li.instagram .insta_btn7 {
+    background-color: #727272;
+  }
+  .footer-sns li.instagram:hover .insta_btn7 {
+    background-color: rgba(114, 114, 114, 0);
+  }
 }
 .footer-sns a {
   color: #fff;
@@ -540,6 +563,35 @@ main {
   align-items: center;
 }
 
+/* Instagramボタン全体 */
+.flowbtn7 {
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: #fff !important;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+/* アイコンをど真ん中に*/
+.flowbtn7 i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Instagramアイコン位置 */
+.insta_btn7 .fa-instagram {
+  font-size: 35px;
+}
+
+/* Instagram紫グラデ背景 */
 .copyright {
   text-align: center;
   font-size: 1rem;
@@ -553,15 +605,14 @@ small {
   padding: 2rem auto;
 }
 
-@media screen and (min-width: 550px) {
-  .news-category {
-    margin-left: 2rem;
-  }
+.news-category {
+  padding: 1rem;
 }
 .news-category li {
   display: inline-block;
   padding: 0 8px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+  margin-right: 0.5rem;
   background-color: #FF0000;
   border-radius: 1rem;
 }
@@ -911,6 +962,9 @@ input:focus, textarea:focus, select:focus {
   font-size: 16px;
 }
 
+.arrivals {
+  margin-top: 4rem;
+}
 .arrivals .cards__item {
   display: grid;
   gap: 10px;
@@ -981,19 +1035,22 @@ input:focus, textarea:focus, select:focus {
 .arrivals__cards {
   display: flex;
   flex-direction: column;
+  list-style: none;
 }
 @media screen and (min-width: 550px) and (max-width: 767px) {
-  .arrivals__cards ol {
+  .arrivals__cards {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
     width: 100%;
+    background-color: black;
   }
-}
-.arrivals__cards ol .cards__item {
-  width: 45%;
+  .arrivals__cards .card_container {
+    width: 45%;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+  }
 }
 
 .arrivals__title {
@@ -1021,25 +1078,23 @@ input:focus, textarea:focus, select:focus {
 }
 
 @media screen and (min-width: 550px) {
-  .posts-list .arrivals__cards,
   .newarrivals .arrivals__cards {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: 2rem auto;
+    background-color: black;
   }
 }
-.posts-list .arrivals__cards .cards__item,
 .newarrivals .arrivals__cards .cards__item {
   background-color: #000;
 }
 @media screen and (min-width: 550px) {
-  .posts-list .arrivals__cards .cards__item,
   .newarrivals .arrivals__cards .cards__item {
     width: 45%;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
   }
 }
-.posts-list .card,
 .newarrivals .card {
   display: grid;
   gap: 10px;
@@ -1049,14 +1104,12 @@ input:focus, textarea:focus, select:focus {
   grid-template-areas: "cYear cCat cCat  " "cImg  cTitle cTitle";
 }
 @media screen and (min-width: 550px) {
-  .posts-list .card,
   .newarrivals .card {
     grid-template-rows: auto auto 1fr;
     grid-template-columns: auto 1fr;
     grid-template-areas: "cImg   cImg " "cYear  cCat  " "cTitle cTitle";
   }
 }
-.posts-list .card .card__title,
 .newarrivals .card .card__title {
   grid-area: cTitle;
   color: #fff;
@@ -1065,23 +1118,19 @@ input:focus, textarea:focus, select:focus {
   font-size: 1.4rem;
   padding: 0.5rem;
 }
-.posts-list .card .card__year,
 .newarrivals .card .card__year {
   grid-area: cYear;
   color: #fff;
   font-size: 1.2rem;
   margin: 4px;
 }
-.posts-list .card .card__category,
 .newarrivals .card .card__category {
   grid-area: cCat;
 }
-.posts-list .card .card__category ul,
 .newarrivals .card .card__category ul {
   margin: 0;
   padding: 0;
 }
-.posts-list .card .card__category li,
 .newarrivals .card .card__category li {
   display: inline-block;
   color: #fff;
@@ -1090,12 +1139,10 @@ input:focus, textarea:focus, select:focus {
   border-radius: 3px;
   font-size: 1.2rem;
 }
-.posts-list .card .card_image,
 .newarrivals .card .card_image {
   grid-area: cImg;
   width: 100px;
 }
-.posts-list .card .card_image img,
 .newarrivals .card .card_image img {
   height: auto;
   object-fit: cover;
@@ -1103,7 +1150,6 @@ input:focus, textarea:focus, select:focus {
   width: 100%;
 }
 @media screen and (min-width: 550px) {
-  .posts-list .card .card_image,
   .newarrivals .card .card_image {
     width: 100%;
   }
@@ -1149,6 +1195,7 @@ input:focus, textarea:focus, select:focus {
 
 .ranking .cards {
   padding: 0;
+  list-style: none;
 }
 @media screen and (min-width: 550px) and (max-width: 767px) {
   .ranking .cards {
@@ -1328,40 +1375,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* ボタン全体 */
-.flowbtn7 {
-  border-radius: 50%;
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
-  color: #fff !important;
-  text-decoration: none;
-  transition: 0.5s;
-}
-
-/* アイコンをど真ん中に*/
-.flowbtn7 i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
 /* ボタンにマウスを乗せた時 */
-/* Instagramアイコン位置 */
-.insta_btn7 .fa-instagram {
-  font-size: 35px;
-}
-
-/* Instagram紫グラデ背景 */
-.insta_btn7:hover {
-  background: radial-gradient(at 30% bottom, #ffdb2c 5%, rgba(255, 105, 34, 0.65) 35%, rgba(255, 88, 96, 0) 70%), linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-  overflow: hidden;
-}
-
 /* Instagram紫グラデ背景 */
 /* 送信ボタン */
 .submit-btn {

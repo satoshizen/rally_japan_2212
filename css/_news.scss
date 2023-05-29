@@ -2,23 +2,18 @@
 @use "mixin" as m;
 
 .news-category {
-  @include m.tablet {
-    margin-left: 2rem;
-  }
+  padding: 1rem;
   li{
     display: inline-block;
     padding: 0 8px;
-    margin-bottom: .5rem;
+    margin-bottom: 1.2rem;
+    margin-right: .5rem;
     background-color: v.$red1;
     border-radius: 1rem;
   }
 }
-
-
 .news_indiv {
   background-color: v.$black;
-
-
   .indiv-inner{
     color: v.$white;
     padding: 2rem;
@@ -30,7 +25,6 @@
       margin-top: 1rem;
       max-height: 400px;
       text-align: center;
-
     }
 
     .indiv-category {
@@ -47,9 +41,6 @@
           
       }
     }
-    // .indiv-text {
-    //   background-color: v.$black;
-    // }
   }
 }
 

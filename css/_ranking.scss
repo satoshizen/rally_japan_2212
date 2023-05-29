@@ -4,6 +4,7 @@
 .ranking {
   .cards {
     padding: 0;
+    list-style: none;
     @include m.other {  // tabletのときのみ
         display: grid;
         gap: 10px;

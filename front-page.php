@@ -75,7 +75,7 @@
                       最新ニュース
                     </h2>
                     <!-- カード群 -->
-                    <di v class="posts-list__cards news__cards cards">
+                    <div class="posts-list__cards news__cards cards">
                       <!-- カード -->
                       <?php $args = array(
                         'post_type' => 'post', //投稿タイプを指定
@@ -113,7 +113,7 @@
                         <!-- // 記事がない場合 -->
                         <p>記事が見つかりません。</p>
                       <?php endif; ?>
-                    </di>
+                    </div>
                     <!-- ボタンの囲い -->
                     <div class="more__btn">
                       <!-- ボタン -->

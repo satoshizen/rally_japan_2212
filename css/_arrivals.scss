@@ -9,6 +9,7 @@
   font-size: 16px;
 }
 .arrivals {
+  margin-top: 4rem;
   .cards__item{
     display: grid;
     gap: 10px;
@@ -88,7 +89,7 @@
 .arrivals__cards {
   display: flex;
   flex-direction: column;
-  ol {
+  list-style: none;
   @include m.other {
     display: flex;
     flex-direction: row;
@@ -96,10 +97,12 @@
     justify-content: center;
     gap: 2rem;
     width: 100%;
-  }
-    .cards__item {
+    background-color: black;
+    .card_container {
       width: 45%;
-  }
+      filter: drop-shadow(0 0 5px rgba(255,255,255,.4));
+
+    }
   }
 }
 .arrivals__title {
@@ -125,7 +128,7 @@
 }
 
 // NEW ARRIVALS の部
-.posts-list,
+// .posts-list,
 .newarrivals {
   .arrivals__cards {
     @include m.tablet{
@@ -133,13 +136,15 @@
       flex-wrap: wrap;
       justify-content: center;
       margin: 2rem auto;
-      
+      background-color: black;
     }
 
     .cards__item {
       background-color: v.$black;
       @include m.tablet {
         width: 45%;
+        filter: drop-shadow(0 0 5px rgba(255,255,255,.4));
+
       }
     }
   }
