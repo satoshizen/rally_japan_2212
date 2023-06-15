@@ -1,0 +1,8 @@
+.arrivals {
+    margin-top: 4rem;
+
+    &__inner {}
+    &__cards {}
+    &__title {}
+    &__btn {}
+}

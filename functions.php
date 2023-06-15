@@ -107,7 +107,17 @@ add_action('enqueue_block_editor_assets', function () {
 /* =========================================================
 the_archive_title 余計な文字を削除 
 ==========================================================*/
-add_filter('get_the_archive_title', function ($title) {
+
+/**
+ * タイトルを調整する
+ * 自動で作られるアーカイブページのタイトルを調整する。get_the_archive_titleのフィルターフックとして利用する。
+ * 
+ * @param string $title
+ * 
+ * @return string
+ */
+function mp_change_title($title)
+{
   if (is_category()) {
     $title = single_cat_title('', false);
   } elseif (is_tag()) {
@@ -125,10 +135,11 @@ add_filter('get_the_archive_title', function ($title) {
   } else {
   }
   return $title;
-});
+}
+add_filter('get_the_archive_title', 'mp_change_title');
 
 /*
- メインループでカテゴリーアーカイブの時にcolumnのpost_typeを含める
+メインループでカテゴリーアーカイブの時にcolumnのpost_typeを含める
 */
 function add_column_for_main_loop($query)
 {

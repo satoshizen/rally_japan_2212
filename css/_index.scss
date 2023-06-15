@@ -8,12 +8,12 @@ main {
 
 .wrapper {
   margin-top: 6rem;
-@include m.tablet{
-    margin-top: 15rem;
- }
-@include m.pc{
-    margin-top: 21rem;
- }
+  @include m.tablet{
+      margin-top: 15rem;
+  }
+  @include m.pc{
+      margin-top: 21rem;
+  }
 }
 
 .container {
@@ -157,7 +157,7 @@ main {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 2rem auto;
+      margin: 2rem auto 0;
       background-color: v.$black;
       padding: 2rem 0;
 
@@ -170,7 +170,7 @@ main {
       }
     }
   }
-  .posts-list__cards:after {
+  .posts-list__cards::after {
     content:"";
     display: block;
     width: 45%;
@@ -180,8 +180,7 @@ main {
 
 .more__btn {
   text-align: center;
-  // padding: 2rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
   .btn {
     text-decoration: none;
@@ -191,15 +190,19 @@ main {
     background-color: v.$black;
     border-radius: 20px;
     text-transform: uppercase;
+    transition: .5s;
+    &:hover {
+      @include m.pc {
+        color: v.$red1;
+        background-color: v.$white;
+      }
     }
+  }
 }
 
 
   .column-category {
     margin: 1rem;
-    // @include m.tablet {
-    //   margin-left: 2rem;
-    // }
     li{
       display: inline-block;
       padding-right: .5rem;

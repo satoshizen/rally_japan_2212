@@ -3,6 +3,15 @@ $tablet: 550px;
 $sp: 549px;
 
 
+/// @author 
+/// @output max-width: 549px
+/// 
+/// @content  @include m.sp
+/// @example 
+///   $pc: 768px;
+///   $tablet: 550px;
+///   $sp: 549px;
+
 @mixin sp {
   @media screen and (max-width: ($sp)) {
     @content;

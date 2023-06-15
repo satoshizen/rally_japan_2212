@@ -98,11 +98,9 @@ textarea {
   @include m.tablet{
     // width: 70%;
     margin: 3rem auto;
-
   }
   @include m.pc {
     max-width: 960px;
-
   }
   input, select, textarea {
     background-color: v.$green04;
@@ -114,12 +112,7 @@ div {
     color : v.$red1;
     font-size: 1rem;
     vertical-align: top;
-  
  }
-//  .wpcf7-form-control-wrap {
-//     position:static;
-//     font-size: 1.6rem;
-// }
   &.company {
     input {
       width: 15rem;
@@ -160,7 +153,7 @@ div {
     input {
     width: 8rem;
     height: 4rem;
-  }
+    }
   }
 }
 
@@ -172,7 +165,6 @@ input, textarea, select {
   @include m.sp {
     width: 100%;
   }
-
   &:focus {
     outline: 1px v.$green03 solid;
   }

@@ -126,7 +126,7 @@
           <?php endwhile; ?>
         </ul>
         <!-- ボタン -->
-        <div class="arrivals__btn">
+        <div class="more__btn">
             <a href="<?php echo home_url('/new-arrivals') ?>" class="btn">もっと見る</a>
           </div>
         <?php else : ?>
